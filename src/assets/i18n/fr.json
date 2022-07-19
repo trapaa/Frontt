@@ -1,0 +1,27 @@
+{
+    "btn_ajout":"Ajouter",
+    "btn_modification":"Modifier",
+    "btn_enregister":"Enregistrer",
+    "btn_annulation":"Annuler",
+    "btn_validation":"Valider",
+    "btn_consultation":"Consulter",
+    "btn_suppression":"Supprimer",
+    "btn_details":"Détails",
+    "btn_oui":"Oui",
+    "btn_non":"Non",
+    "msg_confirmation_suppression":"Etes-vous sûr de vouloir supprimer cet enregistrement?",
+    "Ajout Type Critère":"Ajout Type Critère",
+    "Type Critère":"Type Critère",
+    "Libelle":"Libelle",
+    "Description":"Description",
+    "Description Ar":"Description Ar",
+    "Consulter Type Critère":"Consulter Type Critère",
+    "Home":"Home",
+    "Opération":"Opération",
+    "Modifier Type Critère":"Modifier Type Critère",
+    "1000 caracteres au maximum":"1000 caracteres au maximum",
+    "un champ obligatoire":"un champ obligatoire"
+
+
+  
+  }

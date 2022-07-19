@@ -1,0 +1,119 @@
+<body>
+    
+
+ 
+    <div class="mobile-menu-overlay"></div>
+
+    <div class="main-container">
+        <div class="pd-ltr-20">
+          
+            <div class="page-header">
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<div class="title">
+							<h4>{{"Modifier Type Critère" | translate}}</h4>
+						</div>
+						<nav aria-label="breadcrumb" role="navigation">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item">
+                                    <a routerLink="/list">Type Critère</a>
+								</li>
+								<li class="breadcrumb-item active" aria-current="page">
+									{{"Modifier Type Critère" | translate}}
+								</li>
+							</ol>
+						</nav>
+					</div>
+					<div class="col-md-6 col-sm-12 text-right">
+						
+					</div>
+				</div>
+			</div>
+            
+            
+            <div class="card-box mb-30">
+               
+              
+                <div class="pd-20 card-box mb-30">
+<div class="clearfix">
+    <div class="pull-left">
+        <h4 class="text-blue h4">{{"Modifier Type Critère" | translate}}</h4>
+
+    </div>
+ 
+</div>
+<form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" novalidate>
+	<div class=" row">
+	
+		<label class="col-md-2 col-sm-6 col-form-label">{{"Libelle" | translate}} : <span class="text-danger">*</span></label>
+		<div class="col-md-4 col-sm-12">
+			<input type="text" class="form-control  mb-2" name="typeCritereLibelle" [(ngModel)]="n.typeCritereLibelle"
+				required #typeCritereLibelle="ngModel"
+				[ngClass]="{ 'is-invalid': f.submitted && typeCritereLibelle.errors }" />
+		
+	
+		<div *ngIf="f.submitted && typeCritereLibelle.errors" class="invalid-feedback">
+			<div *ngIf="typeCritereLibelle.errors['required']">{{"un champ obligatoire" | translate}}</div>
+		</div></div>
+		<label class="col-md-2 col-sm-6 col-form-label">{{"Libelle Ar" | translate}} : <span class="text-danger">*</span></label>
+		<div class="col-md-4 col-sm-12">
+			<input type="text" class="form-control  mb-2" name="  typeCritereLibelleAr"
+				[(ngModel)]="n. typeCritereLibelleAr" required #typeCritereLibelleAr="ngModel"
+				[ngClass]="{ 'is-invalid': f.submitted &&   typeCritereLibelleAr.errors }" />
+			<div *ngIf="f.submitted &&   typeCritereLibelleAr.errors" class="invalid-feedback">
+				<div *ngIf="  typeCritereLibelleAr.errors['required']">{{"un champ obligatoire" | translate}}</div>
+			</div>
+		</div>
+	</div>
+	<div class="  row">
+		<label class=" col-md-2 col-sm-6 col-form-label">{{"Description" | translate}}: </label>
+		<div class="col-md-4 col-sm-12">
+		<textarea type="text" class="form-control" name="typeCritereDescription"
+			[(ngModel)]="n.typeCritereDescription"  #typeCritereDescription="ngModel"
+			[ngClass]="{ 'is-invalid': f.submitted &&  typeCritereDescription.errors }" maxlength="1000"></textarea>
+		<div *ngIf="f.submitted &&  typeCritereDescription.errors" class="invalid-feedback">
+			
+			  <div *ngIf="typeCritereDescription.errors['maxlength']">
+				{{"1000 caracteres au maximum" | translate}}
+			  </div>
+				</div>
+		</div>
+
+	
+		<label class=" col-md-2 col-sm-6  col-form-label">{{"Description Ar" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+		<textarea type="text" class="form-control" name="typeCritereDescriptionAr"
+			[(ngModel)]="n.typeCritereDescriptionAr" #typeCritereDescriptionAr="ngModel"
+			[ngClass]="{ 'is-invalid': f.submitted &&  typeCritereDescriptionAr.errors }" maxlength="1000"></textarea>
+		<div *ngIf="f.submitted &&  typeCritereDescriptionAr.errors" class="invalid-feedback">
+			<div *ngIf="typeCritereDescriptionAr.errors['maxlength']">
+				{{"1000 caracteres au maximum" | translate}}
+			  </div>
+			</div>
+	</div>
+
+
+	</div>
+
+
+	<br/>
+	<div class="form-group row">
+		<button type="button" (click)="onReset(f)" class="btn  btn-secondary color-white offset-9 col-1">
+			{{"btn_annulation" | translate}}
+		</button>
+
+		<button type="submit" class="btn btn-success color-white    col-1 ml-1 ">{{"btn_modification" | translate}}</button>
+		
+	</div>
+</form>
+
+
+
+</div>
+            </div>
+           <app-fouter></app-fouter>
+        </div>
+    </div>
+    
+</body>
+

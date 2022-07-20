@@ -22,7 +22,13 @@
     "modifier Type Critère":"Modifier Type Critère",
     "1000 caracteres au maximum":"1000 caracteres au maximum",
     "un champ obligatoire":"un champ obligatoire",
-    "id":"Id."
+    "id":"Réf.",
+    "ajout operation":"Ajout Opérateur",
+    "operation":"Opérateur",
+    "operateursSymbole":"Opérateurs Symbole",
+    "operateursDescription":"Opérateurs Description"
+
+
     
 
 

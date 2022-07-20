@@ -25,6 +25,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { FouterComponent } from './Views/fouter/fouter.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ConsultationTypeCritereComponent } from './Views/Parametrages/Type-Critere/consultation-type-critere/consultation-type-critere.component';
+import { AjouterOperationComponent } from './Views/Parametrages/Operation/ajouter-operation/ajouter-operation.component';
+import { ConsultationOperationComponent } from './Views/Parametrages/Operation/consultation-operation/consultation-operation.component';
+import { ListeOperationComponent } from './Views/Parametrages/Operation/liste-operation/liste-operation.component';
+import { UpdateOperationComponent } from './Views/Parametrages/Operation/update-operation/update-operation.component';
+import { UpdateOperateursComponent } from './Views/Parametrages/Operateurs/update-operateurs/update-operateurs.component';
+import { AjouterOperateursComponent } from './Views/Parametrages/Operateurs/ajouter-operateurs/ajouter-operateurs.component';
+import { ListeOperateursComponent } from './Views/Parametrages/Operateurs/liste-operateurs/liste-operateurs.component';
+import { ConsultationOperateursComponent } from './Views/Parametrages/Operateurs/consultation-operateurs/consultation-operateurs.component';
 
 export function Ts(http:HttpClient){
   return new TranslateHttpLoader(http,'assets/i18n/','.json');
@@ -38,7 +46,15 @@ export function Ts(http:HttpClient){
     UpdateTypeCritereComponent,
     NavbarComponent,
     FouterComponent,
-    ConsultationTypeCritereComponent
+    ConsultationTypeCritereComponent,
+    AjouterOperationComponent,
+    ConsultationOperationComponent,
+    ListeOperationComponent,
+    UpdateOperationComponent,
+    UpdateOperateursComponent,
+    AjouterOperateursComponent,
+    ListeOperateursComponent,
+    ConsultationOperateursComponent
   ],
   imports: [
     BrowserModule,

@@ -3,18 +3,17 @@ table {
     width: 100%;
   }
 
-  .mat-column-typeCritereDescription, .mat-column-typeCritereDescriptionAr {
+  .mat-column-operateursSymbole{
     flex: none;
-    width: 26%;
+    width: 24%;
 }
 
-.mat-column-typeCritereLibelle, .mat-column-typeCritereLibelleAr {
+.mat-column-operateursDescription {
   flex: none;
-  width: 10%;
+  width: 50%;
 }
 
 .mat-column-Opération {
   flex: none;
-  width: 5%;
+  width: 26%;
 }
-

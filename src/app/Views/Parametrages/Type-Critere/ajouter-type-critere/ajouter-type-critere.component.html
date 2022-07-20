@@ -12,15 +12,15 @@
 				<div class="row">
 					<div class="col-md-6 col-sm-12">
 						<div class="title">
-							<h4> {{"Ajout Type Critère " | translate}}</h4>
+							<h4> {{"ajout Type Critère " | translate}}</h4>
 						</div>
 						<nav aria-label="breadcrumb" role="navigation">
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item">
-									<a routerLink="/list">{{"Type Critère " | translate}}</a>
+									<a routerLink="/list">{{"yype Critère " | translate}}</a>
 								</li>
 								<li class="breadcrumb-item active" aria-current="page">
-									{{"Ajout Type Critère " | translate}}
+									{{"ajout Type Critère " | translate}}
 								</li>
 							</ol>
 						</nav>
@@ -39,7 +39,7 @@
                 <div class="pd-20 card-box mb-30">
 <div class="clearfix">
     <div class="pull-left">
-        <h4 class="text-blue h4">{{"Ajout Type Critère " | translate}}</h4>
+        <h4 class="text-blue h4">{{"ajout Type Critère " | translate}}</h4>
 
     </div>
  
@@ -47,7 +47,7 @@
 <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" novalidate>
 	<div class=" row">
 	
-		<label class="col-md-2 col-sm-6 col-form-label">{{"Libelle" | translate}} : <span class="text-danger">*</span></label>
+		<label class="col-md-2 col-sm-6 col-form-label">{{"libelle" | translate}} : <span class="text-danger">*</span></label>
 		<div class="col-md-4 col-sm-12">
 			<input type="text" class="form-control  mb-2" name="typeCritereLibelle" [(ngModel)]="n.typeCritereLibelle"
 				required #typeCritereLibelle="ngModel"
@@ -57,7 +57,7 @@
 		<div *ngIf="f.submitted && typeCritereLibelle.errors" class="invalid-feedback">
 			<div *ngIf="typeCritereLibelle.errors['required']">{{"un champ obligatoire" | translate}}</div>
 		</div></div>
-		<label class="col-md-2 col-sm-6 col-form-label">{{"Libelle Ar" | translate}} : <span class="text-danger">*</span></label>
+		<label class="col-md-2 col-sm-6 col-form-label">{{"libelle Ar" | translate}} : <span class="text-danger">*</span></label>
 		<div class="col-md-4 col-sm-12">
 			<input type="text" class="form-control  mb-2" name="  typeCritereLibelleAr"
 				[(ngModel)]="n. typeCritereLibelleAr" required #typeCritereLibelleAr="ngModel"
@@ -68,7 +68,7 @@
 		</div>
 	</div>
 	<div class="  row">
-		<label class=" col-md-2 col-sm-6 col-form-label">{{"Description" | translate}} : </label>
+		<label class=" col-md-2 col-sm-6 col-form-label">{{"description" | translate}} : </label>
 		<div class="col-md-4 col-sm-12">
 		<textarea type="text" class="form-control" name="typeCritereDescription"
 			[(ngModel)]="n.typeCritereDescription"  #typeCritereDescription="ngModel"
@@ -82,7 +82,7 @@
 		</div>
 
 	
-		<label class=" col-md-2 col-sm-6  col-form-label">{{"Description Ar" | translate}} : </label>
+		<label class=" col-md-2 col-sm-6  col-form-label">{{"description Ar" | translate}} : </label>
 		<div class="col-md-4 col-sm-12">
 		<textarea type="text" class="form-control" name="typeCritereDescriptionAr"
 			[(ngModel)]="n.typeCritereDescriptionAr" #typeCritereDescriptionAr="ngModel"

@@ -10,17 +10,18 @@
     "btn_oui":"Oui",
     "btn_non":"Non",
     "msg_confirmation_suppression":"Etes-vous sûr de vouloir supprimer cet enregistrement?",
-    "Ajout Type Critère":"Ajout Type Critère",
-    "Type Critère":"Type Critère",
-    "Libelle":"Libelle",
-    "Description":"Description",
-    "Description Ar":"Description Ar",
-    "Consulter Type Critère":"Consulter Type Critère",
-    "Home":"Home",
-    "Opération":"Opération",
-    "Modifier Type Critère":"Modifier Type Critère",
+    "ajout Type Critère":"Ajout Type Critère",
+    "type Critère":"Type Critère",
+    "libelle":"Libelle",
+    "description":"Description",
+    "description Ar":"Description Ar",
+    "consulter Type Critère":"Consulter Type Critère",
+    "home":"Home",
+    "opération":"Opération",
+    "modifier Type Critère":"Modifier Type Critère",
     "1000 caracteres au maximum":"1000 caracteres au maximum",
-    "un champ obligatoire":"un champ obligatoire"
+    "un champ obligatoire":"un champ obligatoire",
+    "id":"Id."
 
 
   

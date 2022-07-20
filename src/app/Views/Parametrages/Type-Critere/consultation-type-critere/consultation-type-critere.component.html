@@ -49,8 +49,8 @@
 		<label class="col-md-2 col-sm-6 col-form-label">{{"libelle" | translate}} : </label>
 		<div class="col-md-4 col-sm-12">
 			<input
-           
-         type="text"  name="typeCritereLibelle" id="typeCritereLibelle" placeholder="Libelle"
+			disabled="false"
+         type="text"  name="typeCritereLibelle" id="typeCritereLibelle" 
                 [(ngModel)]="typeCritere.typeCritereLibelle"  class="form-control mb-3"
              
             />
@@ -61,8 +61,8 @@
 		<label class="col-md-2 col-sm-6 col-form-label">{{"libelle Ar" | translate}} : </label>
 		<div class="col-md-4 col-sm-12">
 			 <input
-           
-         type="text"  name="Libelle Ar" id="Libelle Ar" placeholder="Libelle Ar"
+			 disabled="false"
+         type="text"  name="Libelle Ar" id="Libelle Ar" 
                 [(ngModel)]="typeCritere.typeCritereLibelleAr"   class="form-control mb-3"
                
             />
@@ -75,7 +75,7 @@
 		
 		<label class=" col-md-2 col-sm-6 col-form-label">{{"description" | translate}} : </label>
 		<div class="col-md-4 col-sm-12">
-			<textarea maxlength="1000" name="typeCritereDescription" id="typeCritereDescription" 
+			<textarea  disabled="false" maxlength="1000" name="typeCritereDescription" id="typeCritereDescription" 
             [(ngModel)]="typeCritere.typeCritereDescription"   class="form-control mb-3"
              >
 
@@ -85,7 +85,7 @@
 		
 		<label class=" col-md-2 col-sm-6  col-form-label">{{"description Ar" | translate}} : </label>
 		<div class="col-md-4 col-sm-12">
-			 <textarea maxlength="1000" name="Description Ar" id="Description Ar " 
+			 <textarea  disabled="false"  maxlength="1000" name="Description Ar" id="Description Ar " 
             [(ngModel)]="typeCritere.typeCritereDescriptionAr"    class="form-control mb-3"
             >
 

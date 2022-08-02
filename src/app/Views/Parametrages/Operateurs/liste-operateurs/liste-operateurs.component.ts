@@ -55,7 +55,7 @@ update(id:number){
 
 consulter(id:number){
   this.router.navigate(['/consulter-operateur']);
-  localStorage.setItem("id",JSON.stringify(id));
+  localStorage.setItem("idO",JSON.stringify(id));
 
      
       

@@ -33,6 +33,10 @@ import { UpdateOperateursComponent } from './Views/Parametrages/Operateurs/updat
 import { AjouterOperateursComponent } from './Views/Parametrages/Operateurs/ajouter-operateurs/ajouter-operateurs.component';
 import { ListeOperateursComponent } from './Views/Parametrages/Operateurs/liste-operateurs/liste-operateurs.component';
 import { ConsultationOperateursComponent } from './Views/Parametrages/Operateurs/consultation-operateurs/consultation-operateurs.component';
+import { ListeTypeCahierChargeComponent } from './Views/Parametrages/TypeCahierCharge/liste-type-cahier-charge/liste-type-cahier-charge.component';
+import { AjouterTypeCahierChargeComponent } from './Views/Parametrages/TypeCahierCharge/ajouter-type-cahier-charge/ajouter-type-cahier-charge.component';
+import { ConsulterTypeCahierChargeComponent } from './Views/Parametrages/TypeCahierCharge/consulter-type-cahier-charge/consulter-type-cahier-charge.component';
+import { UpdateTypeCahierChargeComponent } from './Views/Parametrages/TypeCahierCharge/update-type-cahier-charge/update-type-cahier-charge.component';
 
 export function Ts(http:HttpClient){
   return new TranslateHttpLoader(http,'assets/i18n/','.json');
@@ -54,7 +58,11 @@ export function Ts(http:HttpClient){
     UpdateOperateursComponent,
     AjouterOperateursComponent,
     ListeOperateursComponent,
-    ConsultationOperateursComponent
+    ConsultationOperateursComponent,
+    ListeTypeCahierChargeComponent,
+    AjouterTypeCahierChargeComponent,
+    ConsulterTypeCahierChargeComponent,
+    UpdateTypeCahierChargeComponent
   ],
   imports: [
     BrowserModule,

@@ -5,7 +5,7 @@ table {
 
   .mat-column-typeCritereDescription, .mat-column-typeCritereDescriptionAr {
     flex: none;
-    width: 26%;
+    width: 25%;
 }
 
 .mat-column-typeCritereLibelle, .mat-column-typeCritereLibelleAr {

@@ -45,7 +45,7 @@
 <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" novalidate>
 	<div class=" row">
 	
-		<label class="col-md-2 col-sm-6 col-form-label">{{"libelle" | translate}} : </label>
+		<label class="col-md-2 col-sm-6 col-form-label">{{"libelle" | translate}} :&nbsp; <span class="text-danger">*</span> </label>
 		<div class="col-md-4 col-sm-12">
 			<input type="text" class="form-control  mb-2" name="typeCritereLibelle" [(ngModel)]="n.typeCritereLibelle"
 				required #typeCritereLibelle="ngModel"
@@ -55,7 +55,7 @@
 		<div *ngIf="f.submitted && typeCritereLibelle.errors" class="invalid-feedback">
 			<div *ngIf="typeCritereLibelle.errors['required']">{{"un champ obligatoire" | translate}}</div>
 		</div></div>
-		<label class="col-md-2 col-sm-6 col-form-label">{{"libelle Ar" | translate}} : </label>
+		<label class="col-md-2 col-sm-6 col-form-label">{{"libelle Ar" | translate}} :&nbsp; <span class="text-danger">*</span> </label>
 		<div class="col-md-4 col-sm-12">
 			<input type="text" class="form-control  mb-2" name="  typeCritereLibelleAr"
 				[(ngModel)]="n. typeCritereLibelleAr" required #typeCritereLibelleAr="ngModel"
@@ -102,7 +102,7 @@
 			{{"btn_annulation" | translate}}
 		</button>
 
-		<button type="submit" class="btn btn-success color-white    col-1 ml-1 ">{{"btn_modification" | translate}}</button>
+		<button type="submit" class="btn btn-warning     col-1 ml-1 ">{{"btn_modification" | translate}}</button>
 		
 	</div>
 </form>

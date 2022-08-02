@@ -18,15 +18,24 @@
     "description Ar":"Description Ar",
     "consulter Type Critère":"Détails Type Critère",
     "home":"Home",
-    "opération":"Opération",
+    "opération":"Opérations",
     "modifier Type Critère":"Modifier Type Critère",
     "1000 caracteres au maximum":"1000 caracteres au maximum",
     "un champ obligatoire":"un champ obligatoire",
-    "id":"Réf.",
+    "id":"Réf",
     "ajout operation":"Ajout Opérateur",
-    "operation":"Opérateur",
-    "operateursSymbole":"Opérateurs Symbole",
-    "operateursDescription":"Opérateurs Description"
+    "opérateur":"Opérateur",
+    "operateursSymbole":"Symbole",
+    "operateursDescription":"Description",
+    "ajout Opérateur":"Ajout Opérateur",
+    "consulter operateur":"Détails Opérateur",
+    "modifier operateur":"Modifier Opérateur",
+    "cahier charge":" Liste Types Des Cahiers Des Charges",
+    "ordre":"Ordre",
+    "typeCritere":"Type ",
+    "ajout cahier":"Ajout Type Cahier De Charges",
+    "consulter cahier":"Consulter Cahier",
+    "cahier":"Cahier Charge"
 
 
     

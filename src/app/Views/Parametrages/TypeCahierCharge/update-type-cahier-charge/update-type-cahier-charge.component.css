@@ -1,0 +1,5 @@
+.select {
+    display: grid;
+    grid-template-areas: "select";
+    align-items: center;
+    position: relative;}

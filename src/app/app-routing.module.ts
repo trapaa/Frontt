@@ -12,6 +12,10 @@ import { UpdateOperateursComponent } from './Views/Parametrages/Operateurs/updat
 import { AjouterOperateursComponent } from './Views/Parametrages/Operateurs/ajouter-operateurs/ajouter-operateurs.component';
 import { ListeOperateursComponent } from './Views/Parametrages/Operateurs/liste-operateurs/liste-operateurs.component';
 import { ConsultationOperateursComponent } from './Views/Parametrages/Operateurs/consultation-operateurs/consultation-operateurs.component';
+import { ListeTypeCahierChargeComponent } from './Views/Parametrages/TypeCahierCharge/liste-type-cahier-charge/liste-type-cahier-charge.component';
+import { AjouterTypeCahierChargeComponent } from './Views/Parametrages/TypeCahierCharge/ajouter-type-cahier-charge/ajouter-type-cahier-charge.component';
+import { ConsulterTypeCahierChargeComponent } from './Views/Parametrages/TypeCahierCharge/consulter-type-cahier-charge/consulter-type-cahier-charge.component';
+import { UpdateTypeCahierChargeComponent } from './Views/Parametrages/TypeCahierCharge/update-type-cahier-charge/update-type-cahier-charge.component';
 
 const routes: Routes = [
   { path: 'list', component: ListeTypeCritereComponent},
@@ -22,7 +26,10 @@ const routes: Routes = [
   { path: 'ajouter-operateur', component: AjouterOperateursComponent},
   { path: 'update-operateur', component: UpdateOperateursComponent},
   { path: 'consulter-operateur', component: ConsultationOperateursComponent},
-
+  { path: 'list-cahier', component: ListeTypeCahierChargeComponent},
+  { path: 'ajout-cahier', component: AjouterTypeCahierChargeComponent},
+  { path: 'consulter-cahier', component: ConsulterTypeCahierChargeComponent},
+  { path: 'modifier-cahier', component: UpdateTypeCahierChargeComponent},
 ];
 
 @NgModule({

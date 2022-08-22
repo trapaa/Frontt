@@ -1,0 +1,313 @@
+<body>
+    
+
+
+    <div class="mobile-menu-overlay"></div>
+
+    <div class="main-container">
+        <div class="pd-ltr-20">
+
+
+            <div class="page-header">
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<div class="title">
+							<h4> {{"consulter sou" | translate}}</h4>
+						</div>
+						<nav aria-label="breadcrumb" role="navigation">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item">
+									<a routerLink="/list-sou">{{"sou" | translate}}</a>
+								</li>
+								<li class="breadcrumb-item active" aria-current="page">
+									{{"consulter sou" | translate}}
+								</li>
+							</ol>
+						</nav>
+					</div>
+					<div class="col-md-6 col-sm-12 text-right">
+						
+					</div>
+				</div>
+			</div>
+            
+            
+            
+            <div class="card-box mb-30">
+               
+              
+                <div class="pd-20 card-box mb-30">
+<div class="clearfix">
+    <div class="pull-left">
+        <h4 class="text-blue h4">{{"consulter sou" | translate}}</h4>
+
+    </div>
+ 
+</div>
+
+
+<form  #f="ngForm">
+    
+    <div class="row ">
+		<label class="col-md-2 col-sm-6 col-form-label">{{"gouvernerat" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.gouvernorat?.gouverneratLibelle}}
+			
+		</div>
+
+        <label class="col-md-2 col-sm-6 col-form-label">{{"pays" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.pays?.paysLibelle}}
+			
+		</div>
+	</div>
+	<div class="row ">
+
+		<label class="col-md-2 col-sm-6 col-form-label">{{"raison sociale" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+			{{n.soumissionnaireRaisonSociale}}
+			
+		</div>
+	
+	
+		<label class="col-md-2 col-sm-6 col-form-label">{{"capital" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.soumissionnaireCapital}}
+			
+		</div>
+
+    </div>
+<div class="row ">
+		<label class="col-md-2 col-sm-6 col-form-label">{{"matricule fiscal" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.soumissionnaireMatriculeFiscal}}
+			
+		</div>
+
+        <label class="col-md-2 col-sm-6 col-form-label">{{"adresse siege social" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.soumissionnaireAdresseSiegeSocial}}
+			
+		</div>
+	</div>
+
+    <div class="row ">
+		<label class="col-md-2 col-sm-6 col-form-label">{{"cnss" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.soumissionnaireAffiliationCnss}}
+			
+		</div>
+
+        <label class="col-md-2 col-sm-6 col-form-label">{{"numero rib" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.soumissionnaireNumeroRib}}
+			
+		</div>
+	</div>
+
+
+    <div class="row ">
+		<label class="col-md-2 col-sm-6 col-form-label">{{"lieu ouverture compte" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.soumissionnaireLieuOuvertureCompte}}
+			
+		</div>
+
+        <label class="col-md-2 col-sm-6 col-form-label">{{"annee creation" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.soumissionnaireAnneeCreation}}
+			
+		</div>
+	</div>
+
+
+
+    <div class="row ">
+		<label class="col-md-2 col-sm-6 col-form-label">{{"identifiant" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.soumissionnaireIdentifiant}}
+			
+		</div>
+
+        <label class="col-md-2 col-sm-6 col-form-label">{{"nom" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.soumissionnaireNom}}
+			
+		</div>
+	</div>
+
+
+
+    <div class="row ">
+		<label class="col-md-2 col-sm-6 col-form-label">{{"prenom" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.soumissionnairePrenom}}
+			
+		</div>
+
+        <label class="col-md-2 col-sm-6 col-form-label">{{"tel" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.soumissionnaireTel}}
+			
+		</div>
+	</div>
+
+
+
+    <div class="row ">
+		<label class="col-md-2 col-sm-6 col-form-label">{{"fax" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.soumissionnaireFax}}
+			
+		</div>
+
+        <label class="col-md-2 col-sm-6 col-form-label">{{"mail entreprise" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.soumissionnaireMailEntreprise}}
+			
+		</div>
+	</div>
+
+
+
+    <div class="row ">
+		<label class="col-md-2 col-sm-6 col-form-label">{{"site web" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.soumissionnaireSiteWeb}}
+			
+		</div>
+
+        <label class="col-md-2 col-sm-6 col-form-label">{{"titre rep" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.soumissionnaireTitreRep}}
+			
+		</div>
+	</div>
+
+
+
+    <div class="row ">
+		<label class="col-md-2 col-sm-6 col-form-label">{{"mail rep" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.soumissionnaireMailRep}}
+			
+		</div>
+
+        <label class="col-md-2 col-sm-6 col-form-label">{{"tel rep" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.soumissionnaireTelRep}}
+			
+		</div>
+	</div>
+
+
+    <div class="row ">
+		<label class="col-md-2 col-sm-6 col-form-label">{{"registre commerce" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.soumissionnaireNumeroRegistreCommerce}}
+			
+		</div>
+
+        <label class="col-md-2 col-sm-6 col-form-label">{{"codep" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.codePostaleId}}
+			
+		</div>
+	</div>
+
+
+
+    <div class="row ">
+		<label class="col-md-2 col-sm-6 col-form-label">{{"autre adresse" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.soumissionnaireAutreAdresse}}
+			
+		</div>
+
+        
+	</div>
+
+
+
+    <div class="row ">
+		<label class="col-md-2 col-sm-6 col-form-label">{{"fonction" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.fonction?.fonctionLibelle}}
+			
+		</div>
+
+        <label class="col-md-2 col-sm-6 col-form-label">{{"forme" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.formejuridique?.formeJuridiqueNom}}
+			
+		</div>
+	</div>
+
+
+
+   
+
+
+    <div class="row ">
+		<label class="col-md-2 col-sm-6 col-form-label">{{"ville" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.ville?.villeNom}}
+			
+		</div>
+
+        <label class="col-md-2 col-sm-6 col-form-label">{{"type" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.typeMarche?.typeMarcheLibelle}}
+			
+		</div>
+	</div>
+
+	<div class="row ">
+		<label class="col-md-2 col-sm-6 col-form-label">{{"etat" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.etat?.etatLibelle}}
+			
+		</div>
+
+        <label class="col-md-2 col-sm-6 col-form-label">{{"etat compte" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.soumissionnaireEtatCompte?.etatLibelle}}
+			
+		</div>
+	</div>
+	
+	
+
+
+
+
+	<br/>
+	<br/>
+
+</form>
+
+
+
+
+
+
+</div>
+            </div>
+            <div class="footer-wrap pd-20 mb-20 card-box">
+               
+                <a href="https://www.xtensus.com/" target="Xtensus"
+                    ></a
+                >
+            </div>
+        </div>
+    </div>
+    <!-- welcome modal start -->
+    
+       
+       
+      
+    
+    
+    
+</body>
+

@@ -1,0 +1,116 @@
+<body>
+    
+
+
+    <div class="mobile-menu-overlay"></div>
+
+    <div class="main-container">
+        <div class="pd-ltr-20">
+
+
+            <div class="page-header">
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<div class="title">
+							<h4> {{"consulter type" | translate}}</h4>
+						</div>
+						<nav aria-label="breadcrumb" role="navigation">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item">
+									<a routerLink="/list-type">{{"type" | translate}}</a>
+								</li>
+								<li class="breadcrumb-item active" aria-current="page">
+									{{"consulter type" | translate}}
+								</li>
+							</ol>
+						</nav>
+					</div>
+					<div class="col-md-6 col-sm-12 text-right">
+						
+					</div>
+				</div>
+			</div>
+            
+            
+            
+            <div class="card-box mb-30">
+               
+              
+                <div class="pd-20 card-box mb-30">
+<div class="clearfix">
+    <div class="pull-left">
+        <h4 class="text-blue h4">{{"consulter type" | translate}}</h4>
+
+    </div>
+ 
+</div>
+
+
+<form  #f="ngForm">
+	<div class="row ">
+
+		<label class="col-md-2 col-sm-6 col-form-label">{{"libelle" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+			{{n.typeMarcheLibelle}}
+			
+		</div>
+	
+	
+		<label class="col-md-2 col-sm-6 col-form-label">{{"acronyme" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.typeMarcheAcronyme}}
+			
+		</div>
+        <label class="col-md-2 col-sm-6 col-form-label">{{"description" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.typeMarcheDescription}}
+			
+		</div>
+        <label class="col-md-2 col-sm-6 col-form-label">{{"ordre" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.typeMarcheOrdre}}
+			
+		</div>
+<div class="row ">
+		<label class="col-md-2 col-sm-6 col-form-label">{{"etat" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+            {{n.etat.etatLibelle}}
+			
+		</div>
+	</div>
+	
+	
+ </div>
+
+
+
+	<br/>
+	<br/>
+
+</form>
+
+
+
+
+
+
+</div>
+            </div>
+            <div class="footer-wrap pd-20 mb-20 card-box">
+               
+                <a href="https://www.xtensus.com/" target="Xtensus"
+                    ></a
+                >
+            </div>
+        </div>
+    </div>
+    <!-- welcome modal start -->
+    
+       
+       
+      
+    
+    
+    
+</body>
+

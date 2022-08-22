@@ -84,7 +84,7 @@
 	
 		<label class=" col-md-2 col-sm-6  col-form-label">{{"typeCritere" | translate}} :&nbsp; <span class="text-danger">*</span> </label>
 		<div class="col-md-4 col-sm-12">
-             <select #teams (change)="onSelected(teams.value)" class="form-control"
+             <select #teams (change)="onSelected(teams.value)" class="form-select"
 			 name="typeCritereId" id="typeCritereId" 
 			 #typeCritereId="ngModel" [(ngModel)]="n.typeCritereId" 
         [ngClass]="{'invalid-textbox' : f.submitted && typeCritereId.invalid }" required>

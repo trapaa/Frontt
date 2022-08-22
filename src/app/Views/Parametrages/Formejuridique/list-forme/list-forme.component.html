@@ -1,0 +1,114 @@
+
+
+ <body>
+		
+
+
+	<div class="mobile-menu-overlay"></div>
+
+	<div class="main-container">
+		<div class="pd-ltr-20">
+			
+			
+			<div class="page-header">
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<div class="title">
+							<h4>{{"forme" | translate}}</h4>
+						</div>
+						<nav aria-label="breadcrumb" role="navigation">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item">
+									<a href="index.html">{{"Home" | translate}}</a>
+								</li>
+								<li class="breadcrumb-item active" aria-current="page">
+									{{"forme" | translate}}
+								</li>
+							</ol>
+						</nav>
+					</div>
+					<div class="col-md-6 col-sm-12 text-right">
+						
+					</div>
+				</div>
+			</div>
+			<div class="card-box mb-30">
+				
+				
+				<div class="cta flex-shrink-0">
+					
+
+					<button type="button" class="btn btn-success offset-1" routerLink="/ajout-forme" style="margin-left: 1em;margin-top: 1em;"><i class="icon-copy fa fa-plus" aria-hidden="true"  ></i> </button>
+				</div>
+				
+			
+					
+				 
+				
+
+				
+<div class="container">
+	<div  style="margin-left: 75%;">
+	  <mat-form-field appearance="fill">
+		<input matInput placeholder="Recherche" autocomplete="off" (keyup)="filterData($event)">
+
+	  </mat-form-field>
+	</div>
+	<table mat-table matSort [dataSource]="dataSource" class="mat-elevation-z8 ">
+	
+	
+	  <!-- Position Column -->
+	  <ng-container matColumnDef="formeJuridiqueId" class="ml-6">
+		<th mat-header-cell mat-sort-header *matHeaderCellDef> {{"id" | translate}} </th>
+		<td mat-cell *matCellDef="let element"> {{element.formeJuridiqueId}} </td>
+	  </ng-container>
+
+	  <ng-container matColumnDef="formeJuridiqueNom">
+		<th mat-header-cell mat-sort-header *matHeaderCellDef> {{"nom" | translate}} </th>
+		<td mat-cell *matCellDef="let element"> {{element.formeJuridiqueNom}} </td>
+	  </ng-container>
+
+	  
+
+	  <ng-container matColumnDef="Opération">
+		<th mat-header-cell *matHeaderCellDef> {{"opération" | translate}} </th>
+		<td mat-cell *matCellDef="let element"> 
+			
+			<button type="button" class="btn btn-info btn-sm"  (click)="consulter(element.formeJuridiqueId)"><i class="bi bi-search" ></i></button>
+			
+			
+			<button type="button" class="btn btn-warning  btn-sm ml-3" (click)="update(element.formeJuridiqueId)"><i class="icon-copy dw dw-edit2"   ></i
+			></button>
+		
+		<button type="button" class="btn btn-danger btn-sm ml-3" (click)="deletee(element)"><i class="icon-copy dw dw-delete-3" ></i
+			></button>
+		
+
+				 </td>
+	  </ng-container>
+	  
+	
+	 
+	
+	  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+	  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+
+	</table>
+	
+	<mat-paginator #paginator
+		[pageSize]="10"
+		[pageSizeOptions]="[5, 10, 25, 100]"
+		aria-label="Select page">
+	</mat-paginator>
+
+  </div>
+			
+				
+
+			</div>
+			<app-fouter></app-fouter>
+		</div>
+	</div>
+	
+</body>

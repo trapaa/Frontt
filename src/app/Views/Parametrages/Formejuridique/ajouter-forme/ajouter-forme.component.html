@@ -1,0 +1,98 @@
+<body>
+    
+
+
+    <div class="mobile-menu-overlay"></div>
+
+    <div class="main-container">
+        <div class="pd-ltr-20">
+
+
+            <div class="page-header">
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<div class="title">
+							<h4> {{"ajout forme" | translate}}</h4>
+						</div>
+						<nav aria-label="breadcrumb" role="navigation">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item">
+									<a routerLink="/list-forme">{{"forme" | translate}}</a>
+								</li>
+								<li class="breadcrumb-item active" aria-current="page">
+									{{"ajout forme" | translate}}
+								</li>
+							</ol>
+						</nav>
+					</div>
+					<div class="col-md-6 col-sm-12 text-right">
+						
+					</div>
+				</div>
+			</div>
+            
+            
+            
+            <div class="card-box mb-30">
+               
+              
+                <div class="pd-20 card-box mb-30">
+<div class="clearfix">
+    <div class="pull-left">
+        <h4 class="text-blue h4">{{"ajout forme" | translate}}</h4>
+
+    </div>
+ 
+</div>
+<form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" novalidate>
+	<div class=" row">
+	
+		<label class="col-md-3 col-sm-6 col-form-label">{{"Nom" | translate}} :&nbsp; <span class="text-danger">*</span></label>
+		<div class="col-md-6 col-sm-12">
+			<input type="text" class="form-control  mb-6" name="formeJuridiqueNom" [(ngModel)]="n.formeJuridiqueNom"
+				required #formeJuridiqueNom="ngModel"
+				[ngClass]="{ 'is-invalid': f.submitted && formeJuridiqueNom.errors }" />
+		
+	
+		<div *ngIf="f.submitted && formeJuridiqueNom.errors" class="invalid-feedback">
+			<div *ngIf="formeJuridiqueNom.errors['required']">{{"un champ obligatoire" | translate}}</div>
+		</div></div>
+		
+	</div>
+	
+
+
+	<br/>
+	<div class="form-group row">
+		<button type="button" routerLink="/list-forme" class="btn  btn-secondary color-white offset-9 col-1">
+			{{"btn_annulation" | translate}}
+		</button>
+
+		<button type="submit" class="btn btn-success color-white    col-1 ml-1 ">{{"btn_ajout" | translate}}</button>
+		
+	</div>
+</form>
+
+
+
+
+</div>
+            </div>
+            <div class="footer-wrap pd-20 mb-20 card-box">
+               
+                <a href="https://www.xtensus.com/" target="Xtensus"
+                    ></a
+                >
+            </div>
+        </div>
+    </div>
+    <!-- welcome modal start -->
+    
+       
+       
+      
+    
+    
+    
+</body>
+

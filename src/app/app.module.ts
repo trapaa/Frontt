@@ -37,6 +37,39 @@ import { ListeTypeCahierChargeComponent } from './Views/Parametrages/TypeCahierC
 import { AjouterTypeCahierChargeComponent } from './Views/Parametrages/TypeCahierCharge/ajouter-type-cahier-charge/ajouter-type-cahier-charge.component';
 import { ConsulterTypeCahierChargeComponent } from './Views/Parametrages/TypeCahierCharge/consulter-type-cahier-charge/consulter-type-cahier-charge.component';
 import { UpdateTypeCahierChargeComponent } from './Views/Parametrages/TypeCahierCharge/update-type-cahier-charge/update-type-cahier-charge.component';
+import { ListPaysComponent } from './Views/Parametrages/Pays/list-pays/list-pays.component';
+import { AjouterPaysComponent } from './Views/Parametrages/Pays/ajouter-pays/ajouter-pays.component';
+import { ModifierPaysComponent } from './Views/Parametrages/Pays/modifier-pays/modifier-pays.component';
+import { ConsultationPaysComponent } from './Views/Parametrages/Pays/consultation-pays/consultation-pays.component';
+import { AjouterGouverneratComponent } from './Views/Parametrages/Gouvernerat/ajouter-gouvernerat/ajouter-gouvernerat.component';
+import { ListGouverneratComponent } from './Views/Parametrages/Gouvernerat/list-gouvernerat/list-gouvernerat.component';
+import { ModifierGouverneratComponent } from './Views/Parametrages/Gouvernerat/modifier-gouvernerat/modifier-gouvernerat.component';
+import { ConsulterGouverneratComponent } from './Views/Parametrages/Gouvernerat/consulter-gouvernerat/consulter-gouvernerat.component';
+import { ListDeviseComponent } from './Views/Parametrages/Devise/list-devise/list-devise.component';
+import { AjouterDeviseComponent } from './Views/Parametrages/Devise/ajouter-devise/ajouter-devise.component';
+import { ModifierDeviseComponent } from './Views/Parametrages/Devise/modifier-devise/modifier-devise.component';
+import { ConsulterDeviseComponent } from './Views/Parametrages/Devise/consulter-devise/consulter-devise.component';
+import { ListeSoumissionnaireComponent } from './Views/Parametrages/Soumissionnaire/liste-soumissionnaire/liste-soumissionnaire.component';
+import { AjouterVilleComponent } from './Views/Parametrages/Ville/ajouter-ville/ajouter-ville.component';
+import { ListVilleComponent } from './Views/Parametrages/Ville/list-ville/list-ville.component';
+import { ModifierVilleComponent } from './Views/Parametrages/Ville/modifier-ville/modifier-ville.component';
+import { ConsulterVilleComponent } from './Views/Parametrages/Ville/consulter-ville/consulter-ville.component';
+import { ConsulterFonctionComponent } from './Views/Parametrages/Fonction/consulter-fonction/consulter-fonction.component';
+import { ModifierFonctionComponent } from './Views/Parametrages/Fonction/modifier-fonction/modifier-fonction.component';
+import { AjouterFonctionComponent } from './Views/Parametrages/Fonction/ajouter-fonction/ajouter-fonction.component';
+import { ListFonctionComponent } from './Views/Parametrages/Fonction/list-fonction/list-fonction.component';
+import { ListFormeComponent } from './Views/Parametrages/Formejuridique/list-forme/list-forme.component';
+import { AjouterFormeComponent } from './Views/Parametrages/Formejuridique/ajouter-forme/ajouter-forme.component';
+import { ModifierFormeComponent } from './Views/Parametrages/Formejuridique/modifier-forme/modifier-forme.component';
+import { ConsulterFormeComponent } from './Views/Parametrages/Formejuridique/consulter-forme/consulter-forme.component';
+import { AjouterTypeMarcheComponent } from './Views/Parametrages/TypeMarche/ajouter-type-marche/ajouter-type-marche.component';
+import { ModifierTypeMarcheComponent } from './Views/Parametrages/TypeMarche/modifier-type-marche/modifier-type-marche.component';
+import { ConsulterTypeMarcheComponent } from './Views/Parametrages/TypeMarche/consulter-type-marche/consulter-type-marche.component';
+import { ListTypeMarcheComponent } from './Views/Parametrages/TypeMarche/list-type-marche/list-type-marche.component';
+import { AjouterSoumissionnaireComponent } from './Views/Parametrages/Soumissionnaire/ajouter-soumissionnaire/ajouter-soumissionnaire.component';
+import { ModifierSoumissionnaireComponent } from './Views/Parametrages/Soumissionnaire/modifier-soumissionnaire/modifier-soumissionnaire.component';
+import { ConsulterSoumissionnaireComponent } from './Views/Parametrages/Soumissionnaire/consulter-soumissionnaire/consulter-soumissionnaire.component';
+
 
 export function Ts(http:HttpClient){
   return new TranslateHttpLoader(http,'assets/i18n/','.json');
@@ -62,10 +95,43 @@ export function Ts(http:HttpClient){
     ListeTypeCahierChargeComponent,
     AjouterTypeCahierChargeComponent,
     ConsulterTypeCahierChargeComponent,
-    UpdateTypeCahierChargeComponent
+    UpdateTypeCahierChargeComponent,
+    ListPaysComponent,
+    AjouterPaysComponent,
+    ModifierPaysComponent,
+    ConsultationPaysComponent,
+    AjouterGouverneratComponent,
+    ListGouverneratComponent,
+    ModifierGouverneratComponent,
+    ConsulterGouverneratComponent,
+    ListDeviseComponent,
+    AjouterDeviseComponent,
+    ModifierDeviseComponent,
+    ConsulterDeviseComponent,
+    ListeSoumissionnaireComponent,
+    AjouterVilleComponent,
+    ListVilleComponent,
+    ModifierVilleComponent,
+    ConsulterVilleComponent,
+    ConsulterFonctionComponent,
+    ModifierFonctionComponent,
+    AjouterFonctionComponent,
+    ListFonctionComponent,
+    ListFormeComponent,
+    AjouterFormeComponent,
+    ModifierFormeComponent,
+    ConsulterFormeComponent,
+    AjouterTypeMarcheComponent,
+    ModifierTypeMarcheComponent,
+    ConsulterTypeMarcheComponent,
+    ListTypeMarcheComponent,
+    AjouterSoumissionnaireComponent,
+    ModifierSoumissionnaireComponent,
+    ConsulterSoumissionnaireComponent
   ],
   imports: [
     BrowserModule,
+    
     ReactiveFormsModule,
     AppRoutingModule,
     CommonModule,

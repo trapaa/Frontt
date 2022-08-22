@@ -1,0 +1,97 @@
+
+<body>
+    
+
+ 
+    <div class="mobile-menu-overlay"></div>
+
+    <div class="main-container">
+        <div class="pd-ltr-20">
+          
+            <div class="page-header">
+				<div class="row  ">
+					<div class="col-md-6 col-sm-12">
+						<div class="title">
+							<h4>{{"consulter devise" | translate}}</h4>
+						</div>
+						<nav aria-label="breadcrumb" role="navigation">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item">
+                                    <a routerLink="/list-devise">{{"devise" | translate}}</a>
+								</li>
+								<li class="breadcrumb-item active" aria-current="page">
+									{{"consulter devise" | translate}}
+								</li>
+							</ol>
+						</nav>
+					</div>
+					<div class="col-md-6 col-sm-12 text-right">
+						
+					</div>
+				</div>
+			</div>
+            
+            
+            <div class="card-box mb-30">
+               
+              
+                <div class="pd-20 card-box mb-30">
+<div class="clearfix">
+    <div class="pull-left">
+        <h4 class="text-blue h4">{{"consulter devise" | translate}}</h4>
+
+    </div>
+ 
+</div>
+<form  #f="ngForm">
+	<div class="row ">
+
+		<label class="col-md-2 col-sm-6 col-form-label">{{"identifiant" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+			{{n.deviseIdentifiant}}
+			
+		</div>
+	
+	
+		<label class="col-md-2 col-sm-6 col-form-label">{{"nom" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+			{{n.deviseNom}}
+			
+		</div>
+	
+	
+	
+ </div>
+
+ <div class="row mt-5">
+		
+		<label class=" col-md-2 col-sm-6 col-form-label">{{"nb decimale" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+			
+			{{n.deviseNbDecimale}}
+
+			
+		</div>
+		
+		<label class=" col-md-2 col-sm-6  col-form-label">{{"nom decimale" | translate}} : </label>
+		<div class="col-md-4 col-sm-12">
+			{{n.deviseNomDecimale}}
+		</div>
+		
+	</div>
+
+	<br/>
+	<br/>
+
+</form>
+
+
+
+</div>
+            </div>
+			<app-fouter></app-fouter>
+        </div>
+    </div>
+    
+</body>
+

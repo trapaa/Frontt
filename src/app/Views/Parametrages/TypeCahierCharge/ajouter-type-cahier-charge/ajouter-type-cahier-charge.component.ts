@@ -31,6 +31,7 @@ export class AjouterTypeCahierChargeComponent implements OnInit {
 
   onSelected(value:string): void {
 		this.selectedTeam = value;
+    console.log(value)
     
 	}
 

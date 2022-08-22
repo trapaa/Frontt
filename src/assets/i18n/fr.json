@@ -35,7 +35,82 @@
     "typeCritere":"Type ",
     "ajout cahier":"Ajout Type Cahier De Charges",
     "consulter cahier":"Consulter Cahier",
-    "cahier":"Cahier Charge"
+    "cahier":"Cahier Charge",
+    "pays":"Pays",
+    "code":"Code",
+    "ajout pays":"Ajout Pays",
+    "consulter pays":"Détails pays",
+    "modifier pays":"Modifier Pays",
+    "ajout gouvernerat":"Ajout Gouvernerat",
+    "consulter gouvernerat":"Consulter Gouvernerat",
+    "modifier gouvernerat":"Modifier Gouvernerat",
+    "gouvernerat":"Gouvernerat",
+    "devise":"Devise",
+    "ajout devise":"Ajout Devise",
+    "consulter devise":"Consulter Devise",
+    "identifiant":"Identifiant",
+    "nom":"Nom",
+    "nb decimale":"Nb Decimale",
+    "nom decimale":"Nom Decimale",
+    "modifier devise":"Modifier Devise",
+    "type Cahier Charge":"Type Cahier Charge",
+    "forme":"Forme Juridique",
+    "ajout forme":"Ajout Forme Juridique",
+    "consulter forme":"Consulter Forme Juridique",
+    "modifier forme":"Modifier Forme Juridique",
+    "ajout fonction":"Ajout Fonction",
+    "fonction":"Fonction",
+    "consulter fonction":"Consulter Fonction",
+    "modifier fonction":"Modifier Fonction",
+    "ajout ville":"Ajout Ville",
+    "ville":"Ville",
+    "consulter ville":"Consulter Ville",
+    "modifier ville":"Modifier Ville",
+    "ajout type":"Ajout Type Marché",
+    "type":"Type Marché",
+    "consulter type":"Consulter Type Marché",
+    "modifier type":"Modifier Type Marché",
+    "acronyme":"Acronyme",
+    "etat":"Etat",
+    "etat compte":"Etat Compte",
+    "sou":"Soumissionnaire",
+    "raison sociale":"Raison Sociale",
+    "numero registre commerce":"Numero Registre Commerce",
+    "matricule fiscal":"Matricule Fiscal",
+    "capital":"Capital",
+    "consulter sou":"Consulter Soumissionnaire",
+    "adresse siege social":"Adresse Siege Social",
+    "cnss":"Affiliation Cnss",
+    "numero rib":"Numero Rib",
+    "lieu ouverture compte":"Lieu Ouverture Compte",
+    "annee creation":"Annee Creation",
+    
+   
+    "prenom":"Prenom",
+    "tel":"Tel",
+    "fax":"Fax",
+    "mail entreprise":"Mail Entreprise",
+    "site web":"Site Web",
+    "titre rep":"Titre Rep",
+    "mail rep":"Mail Rep",
+    "tel rep":"Tel Rep",
+    "registre commerce":"Registre Commerce",
+    "codep":"Code Postale Id",
+    "autre adresse":"Autre Adresse",
+    "modifier sou":"Modifier Soumissionnaire",
+    "ajout sou":"Ajout Soumissionnaire"
+
+    
+ 
+
+  
+
+
+
+
+
+    
+
 
 
     

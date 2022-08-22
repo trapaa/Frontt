@@ -6,7 +6,8 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import {MatButtonModule} from '@angular/material/button';
-
+import swal from 'sweetalert';
+import { TypeCritere } from 'src/app/models/TypeCritere';
 
 
 
@@ -17,7 +18,7 @@ import {MatButtonModule} from '@angular/material/button';
 })
 export class ListeTypeCritereComponent implements OnInit {
 List:any;
-
+L:any=[]
 title="pagination";
 page : number=1;
 count : number = 0;
@@ -49,6 +50,45 @@ dataSource !:MatTableDataSource<any>;
         })
        
         
+  }
+
+
+
+
+  deletee(p:TypeCritere) {
+    
+    swal({
+      title: "Etes-vous sûr de vouloir supprimer cet enregistrement?",
+     
+      icon: "warning",
+      buttons: ["NON","OUI"],
+      dangerMode: true,
+    })
+      .then((willDelete) => {
+  
+        if (willDelete) {
+          let i =this.L.indexOf(p)
+          
+          this.Service.delete(p.typeCritereId).subscribe(
+            
+            ()=>{this.L.splice(i,1);
+           /*
+             this.nature = this.nature.filter(n => {
+          
+                console.log(this.dataSource);
+                return n.natureCritereId != id;
+  
+                      
+  */
+  this.ngOnInit();
+       
+       
+              });
+         ;
+          
+        } 
+      });
+  
   }
 
 

@@ -1,0 +1,114 @@
+<body>
+    
+
+
+    <div class="mobile-menu-overlay"></div>
+
+    <div class="main-container">
+        <div class="pd-ltr-20">
+
+
+            <div class="page-header">
+				<div class="row">
+					<div class="col-md-6 col-sm-12">
+						<div class="title">
+							<h4> {{"modifier ville" | translate}}</h4>
+						</div>
+						<nav aria-label="breadcrumb" role="navigation">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item">
+									<a routerLink="/list-ville">{{"ville" | translate}}</a>
+								</li>
+								<li class="breadcrumb-item active" aria-current="page">
+									{{"modifier ville" | translate}}
+								</li>
+							</ol>
+						</nav>
+					</div>
+					<div class="col-md-6 col-sm-12 text-right">
+						
+					</div>
+				</div>
+			</div>
+            
+            
+            
+            <div class="card-box mb-30">
+               
+              
+                <div class="pd-20 card-box mb-30">
+<div class="clearfix">
+    <div class="pull-left">
+        <h4 class="text-blue h4">{{"modifier ville" | translate}}</h4>
+
+    </div>
+ 
+</div>
+<form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" novalidate>
+	<div class=" row">
+	
+		<label class="col-md-2 col-sm-6 col-form-label">{{"nom" | translate}} :&nbsp; <span class="text-danger">*</span></label>
+		<div class="col-md-4 col-sm-12">
+			<input type="text" class="form-control  mb-2" name="villeNom" [(ngModel)]="n.villeNom"
+				required #villeNom="ngModel"
+				[ngClass]="{ 'is-invalid': f.submitted && villeNom.errors }" />
+		
+	
+		<div *ngIf="f.submitted && villeNom.errors" class="invalid-feedback">
+			<div *ngIf="villeNom.errors['required']">{{"un champ obligatoire" | translate}}</div>
+		</div></div>
+		<label class=" col-md-2 col-sm-6  col-form-label">{{"gouvernerat" | translate}} :&nbsp; <span class="text-danger">*</span> </label>
+		<div class="col-md-4 col-sm-12">
+             <select #teams (change)="onSelected(teams.value)" class="form-select"
+			
+			
+       >
+               
+                <option *ngFor="let l of List" [selected]="n.gouvernerat.gouverneratId===l.gouverneratId" value="{{l.gouverneratId}}">{{ l.gouverneratLibelle }}</option>
+                
+            </select> 
+
+
+			
+		
+
+			
+			
+            
+	</div>
+	</div>
+	
+	<br/>
+	<div class="form-group row">
+		<button type="button" routerLink="/list-ville" class="btn  btn-secondary color-white offset-9 col-1">
+			{{"btn_annulation" | translate}}
+		</button>
+
+		<button type="submit" class="btn btn-warning     col-1 ml-1 ">{{"btn_modification" | translate}}</button>
+		
+	</div>
+</form>
+
+
+
+
+</div>
+            </div>
+            <div class="footer-wrap pd-20 mb-20 card-box">
+               
+                <a href="https://www.xtensus.com/" target="Xtensus"
+                    ></a
+                >
+            </div>
+        </div>
+    </div>
+    <!-- welcome modal start -->
+    
+       
+       
+      
+    
+    
+    
+</body>
+

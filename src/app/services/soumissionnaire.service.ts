@@ -25,8 +25,8 @@ export class SoumissionnaireService {
   
   }
 
-  public listegouvernerat(){
-    return this.http.get(environment.baseUrl+'/gouv');
+  public listegouvernerat(id:any){
+    return this.http.get(environment.baseUrl+'/gouv/'+id);
   
   }
 
@@ -42,8 +42,8 @@ export class SoumissionnaireService {
   
   }
 
-  public listeville(){
-    return this.http.get(environment.baseUrl+'/ville');
+  public listeville(id:any){
+    return this.http.get(environment.baseUrl+'/ville/'+id);
   
   }
 

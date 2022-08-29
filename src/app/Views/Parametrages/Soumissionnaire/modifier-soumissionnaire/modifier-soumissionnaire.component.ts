@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { DatePipe } from '@angular/common'
 import {gouvernorat} from '../../../../models/Gouvernerat'
 import { SoumissionnaireService } from '../../../../services/soumissionnaire.service';
 
@@ -17,7 +17,7 @@ import { Soumissionnaire } from 'src/app/models/Soumissionnaire';
 })
 export class ModifierSoumissionnaireComponent implements OnInit {
 
-  constructor(private Service:SoumissionnaireService,private router:Router) { }
+  constructor(private Service:SoumissionnaireService,private router:Router,public datepipe: DatePipe) { }
   paysId = '';
   id:any
   n:any;
@@ -30,8 +30,9 @@ export class ModifierSoumissionnaireComponent implements OnInit {
   listemarche:any
   listeville:any
   pays:any
-
-
+  date:any
+  idP:any;
+  idG:any;
 
 
   form = {
@@ -81,13 +82,43 @@ export class ModifierSoumissionnaireComponent implements OnInit {
   onSelected(value:any): void {
 		console.log(value);
 
-    
+  
 	}
 
+
+
+  onSelectedP(): void {
+    
+
+    this.n.gouvernorat.gouverneratId=""
+    this.n.ville.villeId=""
+    this.listeville=[]
+    this.listegouvernerat=[]
+    this.Service.listegouvernerat(this.n.pays.paysId)
+ 
+    .subscribe(data => {
+          
+      this.listegouvernerat=data    
+     })
+   
+ }
+
+ onSelectedG(): void {
+   this.Service.listeville(this.n.gouvernorat.gouverneratId)
+ 
+   .subscribe(data => {
+         
+     this.listeville=data    
+    })
+
+
+    
+   
+ }
  
 
   onSubmit(): void {
-
+this.n.soumissionnaireAnneeCreation=this.date;
     this.Service.update(this.n).subscribe(
       ()=>  (this.router.navigate(['/list-sou']))
     )
@@ -95,9 +126,10 @@ export class ModifierSoumissionnaireComponent implements OnInit {
     }
 
   ngOnInit(): void {
+  
     this.n=new Soumissionnaire();
     this.pays=new Pays();
-
+    
     this.Service.listeforme()
   
     .subscribe(data => {
@@ -112,12 +144,7 @@ export class ModifierSoumissionnaireComponent implements OnInit {
        this.listefonction=data    
       })
 
-      this.Service.listegouvernerat()
-  
-      .subscribe(data => {
-            
-        this.listegouvernerat=data    
-       })
+      
 
        this.Service.listepays()
   
@@ -133,12 +160,7 @@ export class ModifierSoumissionnaireComponent implements OnInit {
           this.listemarche=data    
          })
 
-         this.Service.listeville()
-  
-         .subscribe(data => {
-               
-           this.listeville=data    
-          })
+      
 
 
      this.id=localStorage.getItem('id')
@@ -148,11 +170,31 @@ export class ModifierSoumissionnaireComponent implements OnInit {
      this.Service.getone(this.id)
      
      .subscribe(data => {
-           
+      
        this.n=data 
+       this.idG=this.n.gouvernorat.gouverneratId;
+       this.idP=this.n.pays.paysId;
+       this.date=new Date();
+       this.date=this.datepipe.transform(this.n.soumissionnaireAnneeCreation, 'yyyy-MM-dd');
+console.log(this.date)
+this.Service.listeville( this.idG)
+  
+      .subscribe(data => {
+            
+        this.listeville=data    
+       })
+this.Service.listegouvernerat(this.idP)
+      
+.subscribe(data => {
+      
+  this.listegouvernerat=data  
+  console.log("hhhh")  
+ })
 
        
       })
+
+     
 
       this.Service.listeEtat()
   

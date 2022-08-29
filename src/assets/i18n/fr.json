@@ -75,33 +75,36 @@
     "etat compte":"Etat Compte",
     "sou":"Soumissionnaire",
     "raison sociale":"Raison Sociale",
-    "numero registre commerce":"Numero Registre Commerce",
+    "numero registre commerce":"Registre Commerce",
     "matricule fiscal":"Matricule Fiscal",
     "capital":"Capital",
     "consulter sou":"Consulter Soumissionnaire",
-    "adresse siege social":"Adresse Siege Social",
+    "adresse siege social":"Rue",
     "cnss":"Affiliation Cnss",
-    "numero rib":"Numero Rib",
+    "numero rib":"RIB",
     "lieu ouverture compte":"Lieu Ouverture Compte",
-    "annee creation":"Annee Creation",
-    
-   
+    "annee creation":"Date de creation",
+    "formee":"Forme incorrecte",
+    "ref":"Référence",
     "prenom":"Prenom",
-    "tel":"Tel",
+    "tel":"Tèlèphone",
     "fax":"Fax",
-    "mail entreprise":"Mail Entreprise",
+    "mail entreprise":"Email",
     "site web":"Site Web",
-    "titre rep":"Titre Rep",
-    "mail rep":"Mail Rep",
-    "tel rep":"Tel Rep",
+    "titre rep":"Titre",
+    "mail rep":"Email",
+    "tel rep":"Tèlèphone",
     "registre commerce":"Registre Commerce",
-    "codep":"Code Postale Id",
+    "codep":"Code Postale",
     "autre adresse":"Autre Adresse",
     "modifier sou":"Modifier Soumissionnaire",
-    "ajout sou":"Ajout Soumissionnaire"
-
+    "ajout sou":"Ajout Soumissionnaire",
+    "responsable":"Responsable",
+    "representant legal":"Représentant légal",
+    "adresse siege sociale":"Adresse siége sociale"
     
- 
+    
+    
 
   
 

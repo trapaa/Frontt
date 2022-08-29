@@ -49,7 +49,21 @@
 <form  #f="ngForm">
     
     <div class="row ">
-		<label class="col-md-2 col-sm-6 col-form-label">{{"gouvernerat" | translate}} : </label>
+	
+		<label class="col-md-3 col-sm-6 col-form-label">{{"ref" | translate}} : </label>
+		<div class="col-md-3 col-sm-12">
+            {{n.soumissionnaireReference}}
+			
+		</div>
+
+
+		<label class="col-md-3 col-sm-6 col-form-label">{{"capital" | translate}} : </label>
+		<div class="col-md-3 col-sm-12">
+            {{n.soumissionnaireCapital}}
+			
+		</div>
+
+		<!--<label class="col-md-2 col-sm-6 col-form-label">{{"gouvernerat" | translate}} : </label>
 		<div class="col-md-4 col-sm-12">
             {{n.gouvernorat?.gouverneratLibelle}}
 			
@@ -59,91 +73,93 @@
 		<div class="col-md-4 col-sm-12">
             {{n.pays?.paysLibelle}}
 			
-		</div>
+		</div>-->
 	</div>
-	<div class="row ">
 
-		<label class="col-md-2 col-sm-6 col-form-label">{{"raison sociale" | translate}} : </label>
-		<div class="col-md-4 col-sm-12">
+	
+	<div class="row ">
+		<label class="col-md-3 col-sm-6 col-form-label">{{"raison sociale" | translate}} : </label>
+		<div class="col-md-3 col-sm-12">
 			{{n.soumissionnaireRaisonSociale}}
 			
 		</div>
 	
-	
-		<label class="col-md-2 col-sm-6 col-form-label">{{"capital" | translate}} : </label>
-		<div class="col-md-4 col-sm-12">
-            {{n.soumissionnaireCapital}}
+		<label class="col-md-3 col-sm-6 col-form-label">{{"numero rib" | translate}} : </label>
+		<div class="col-md-3 col-sm-12">
+            {{n.soumissionnaireNumeroRib}}
 			
 		</div>
+	
+		
 
     </div>
 <div class="row ">
-		<label class="col-md-2 col-sm-6 col-form-label">{{"matricule fiscal" | translate}} : </label>
-		<div class="col-md-4 col-sm-12">
-            {{n.soumissionnaireMatriculeFiscal}}
+	<label class="col-md-3 col-sm-6 col-form-label">{{"matricule fiscal" | translate}} : </label>
+	<div class="col-md-3 col-sm-12">
+		{{n.soumissionnaireMatriculeFiscal}}
+		
+	</div>
+
+	<label class="col-md-3 col-sm-6 col-form-label">{{"lieu ouverture compte" | translate}} : </label>
+	<div class="col-md-3 col-sm-12">
+		{{n.soumissionnaireLieuOuvertureCompte}}
+		
+	</div> 
+	</div>
+
+    <div class="row ">
+		<label class="col-md-3 col-sm-6 col-form-label">{{"adresse siege social" | translate}} : </label>
+		<div class="col-md-3 col-sm-12">
+            {{n.soumissionnaireAdresseSiegeSocial}}
 			
 		</div>
 
-        <label class="col-md-2 col-sm-6 col-form-label">{{"adresse siege social" | translate}} : </label>
-		<div class="col-md-4 col-sm-12">
-            {{n.soumissionnaireAdresseSiegeSocial}}
+		<label class="col-md-3 col-sm-6 col-form-label">{{"identifiant" | translate}} : </label>
+		<div class="col-md-3 col-sm-12">
+            {{n.soumissionnaireIdentifiant}}
 			
 		</div>
 	</div>
 
+
     <div class="row ">
-		<label class="col-md-2 col-sm-6 col-form-label">{{"cnss" | translate}} : </label>
-		<div class="col-md-4 col-sm-12">
+		<label class="col-md-3 col-sm-6 col-form-label">{{"cnss" | translate}} : </label>
+		<div class="col-md-3 col-sm-12">
             {{n.soumissionnaireAffiliationCnss}}
 			
 		</div>
 
-        <label class="col-md-2 col-sm-6 col-form-label">{{"numero rib" | translate}} : </label>
-		<div class="col-md-4 col-sm-12">
-            {{n.soumissionnaireNumeroRib}}
-			
-		</div>
-	</div>
-
-
-    <div class="row ">
-		<label class="col-md-2 col-sm-6 col-form-label">{{"lieu ouverture compte" | translate}} : </label>
-		<div class="col-md-4 col-sm-12">
-            {{n.soumissionnaireLieuOuvertureCompte}}
-			
-		</div>
-
-        <label class="col-md-2 col-sm-6 col-form-label">{{"annee creation" | translate}} : </label>
-		<div class="col-md-4 col-sm-12">
-            {{n.soumissionnaireAnneeCreation}}
-			
-		</div>
-	</div>
-
-
-
-    <div class="row ">
-		<label class="col-md-2 col-sm-6 col-form-label">{{"identifiant" | translate}} : </label>
-		<div class="col-md-4 col-sm-12">
-            {{n.soumissionnaireIdentifiant}}
-			
-		</div>
-
-        <label class="col-md-2 col-sm-6 col-form-label">{{"nom" | translate}} : </label>
-		<div class="col-md-4 col-sm-12">
+		<label class="col-md-3 col-sm-6 col-form-label">{{"nom" | translate}} : </label>
+		<div class="col-md-3 col-sm-12">
             {{n.soumissionnaireNom}}
 			
 		</div>
+
+       
 	</div>
 
 
 
     <div class="row ">
-		<label class="col-md-2 col-sm-6 col-form-label">{{"prenom" | translate}} : </label>
-		<div class="col-md-4 col-sm-12">
+		<label class="col-md-3 col-sm-6 col-form-label">{{"annee creation" | translate}} : </label>
+		<div class="col-md-3 col-sm-12">
+            {{date}}
+			
+		</div>
+
+		
+
+        <label class="col-md-3 col-sm-6 col-form-label">{{"prenom" | translate}} : </label>
+		<div class="col-md-3 col-sm-12">
             {{n.soumissionnairePrenom}}
 			
 		</div>
+	</div>
+
+
+
+    <!--<div class="row ">
+		
 
         <label class="col-md-2 col-sm-6 col-form-label">{{"tel" | translate}} : </label>
 		<div class="col-md-4 col-sm-12">
@@ -274,7 +290,7 @@
             {{n.soumissionnaireEtatCompte?.etatLibelle}}
 			
 		</div>
-	</div>
+	</div>-->
 	
 	
 

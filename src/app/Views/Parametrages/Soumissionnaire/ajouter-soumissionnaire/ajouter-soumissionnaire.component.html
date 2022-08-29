@@ -39,7 +39,7 @@
                 <div class="pd-20 card-box mb-30">
 <div class="clearfix">
     <div class="pull-left">
-        <h4 class="text-blue h4">{{"ajou sou" | translate}}</h4>
+        <h4 class="text-blue h4">{{"ajout sou" | translate}}</h4>
 
     </div>
  
@@ -47,8 +47,8 @@
 <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" novalidate>
 	<div class=" row mt-3">
 	
-		<label class="col-md-2 col-sm-6 col-form-label">{{"raison sociale" | translate}} :&nbsp; <span class="text-danger">*</span></label>
-		<div class="col-md-4 col-sm-12">
+		<label class="col-md-3 col-sm-6 col-form-label">{{"raison sociale" | translate}} :&nbsp; <span class="text-danger">*</span></label>
+		<div class="col-md-3 col-sm-12">
 			<input type="text" class="form-control  mb-2" name="soumissionnaireRaisonSociale" [(ngModel)]="n.soumissionnaireRaisonSociale"
 				required #soumissionnaireRaisonSociale="ngModel"
 				[ngClass]="{ 'is-invalid': f.submitted && soumissionnaireRaisonSociale.errors }" />
@@ -57,284 +57,9 @@
 		<div *ngIf="f.submitted && soumissionnaireRaisonSociale.errors" class="invalid-feedback">
 			<div *ngIf="soumissionnaireRaisonSociale.errors['required']">{{"un champ obligatoire" | translate}}</div>
 		</div></div>
-		<label class="col-md-2 col-sm-6 col-form-label">{{"capital" | translate}} :&nbsp; <span class="text-danger">*</span></label>
-		<div class="col-md-4 col-sm-12">
-			<input type="text" class="form-control  mb-2" name="soumissionnaireCapital"
-				[(ngModel)]="n.soumissionnaireCapital" required #soumissionnaireCapital="ngModel"
-				[ngClass]="{ 'is-invalid': f.submitted &&   soumissionnaireCapital.errors }" />
-			<div *ngIf="f.submitted &&   soumissionnaireCapital.errors" class="invalid-feedback">
-				<div *ngIf="  soumissionnaireCapital.errors['required']"> {{"un champ obligatoire" | translate}}</div>
-			</div>
-		</div>
-	</div>
 
-	<div class=" row mt-3">
-	
-		<label class="col-md-2 col-sm-6 col-form-label">{{"fax" | translate}} :&nbsp; <span class="text-danger">*</span></label>
-		<div class="col-md-4 col-sm-12">
-			<input type="text" class="form-control  mb-2" name="soumissionnaireFax" [(ngModel)]="n.soumissionnaireFax"
-				required #soumissionnaireFax="ngModel"
-				[ngClass]="{ 'is-invalid': f.submitted && soumissionnaireFax.errors }" />
-		
-	
-		<div *ngIf="f.submitted && soumissionnaireFax.errors" class="invalid-feedback">
-			<div *ngIf="soumissionnaireFax.errors['required']">{{"un champ obligatoire" | translate}}</div>
-		</div></div>
-		<label class="col-md-2 col-sm-6 col-form-label">{{"site web" | translate}} :&nbsp; <span class="text-danger">*</span></label>
-		<div class="col-md-4 col-sm-12">
-			<input type="text" class="form-control  mb-2" name="soumissionnaireSiteWeb"
-				[(ngModel)]="n.soumissionnaireSiteWeb" required #soumissionnaireSiteWeb="ngModel"
-				[ngClass]="{ 'is-invalid': f.submitted &&   soumissionnaireSiteWeb.errors }" />
-			<div *ngIf="f.submitted &&   soumissionnaireSiteWeb.errors" class="invalid-feedback">
-				<div *ngIf="  soumissionnaireSiteWeb.errors['required']"> {{"un champ obligatoire" | translate}}</div>
-			</div>
-		</div>
-	</div>
-
-	<div class=" row mt-3">
-	
-		<label class="col-md-2 col-sm-6 col-form-label">{{"mail rep" | translate}} :&nbsp; <span class="text-danger">*</span></label>
-		<div class="col-md-4 col-sm-12">
-			<input type="text" class="form-control  mb-2" name="soumissionnaireMailRep" [(ngModel)]="n.soumissionnaireMailRep"
-				required #soumissionnaireMailRep="ngModel"
-				[ngClass]="{ 'is-invalid': f.submitted && soumissionnaireMailRep.errors }" />
-		
-	
-		<div *ngIf="f.submitted && soumissionnaireMailRep.errors" class="invalid-feedback">
-			<div *ngIf="soumissionnaireMailRep.errors['required']">{{"un champ obligatoire" | translate}}</div>
-		</div></div>
-		<label class="col-md-2 col-sm-6 col-form-label">{{"mail entreprise" | translate}} :&nbsp; <span class="text-danger">*</span></label>
-		<div class="col-md-4 col-sm-12">
-			<input type="text" class="form-control  mb-2" name="soumissionnaireMailEntreprise"
-				[(ngModel)]="n.soumissionnaireMailEntreprise" required #soumissionnaireMailEntreprise="ngModel"
-				[ngClass]="{ 'is-invalid': f.submitted &&   soumissionnaireMailEntreprise.errors }" />
-			<div *ngIf="f.submitted &&   soumissionnaireMailEntreprise.errors" class="invalid-feedback">
-				<div *ngIf="  soumissionnaireMailEntreprise.errors['required']"> {{"un champ obligatoire" | translate}}</div>
-			</div>
-		</div>
-	</div>
-	
-
-
-    <div class=" row mt-3">
-	
-		<label class="col-md-2 col-sm-6 col-form-label">{{"matricule fiscal" | translate}} :&nbsp; <span class="text-danger">*</span></label>
-		<div class="col-md-4 col-sm-12">
-			<input type="text" class="form-control  mb-2" name="soumissionnaireMatriculeFiscal" [(ngModel)]="n.soumissionnaireMatriculeFiscal"
-				required #soumissionnaireMatriculeFiscal="ngModel"
-				[ngClass]="{ 'is-invalid': f.submitted && soumissionnaireMatriculeFiscal.errors }" />
-		
-	
-		<div *ngIf="f.submitted && soumissionnaireMatriculeFiscal.errors" class="invalid-feedback">
-			<div *ngIf="soumissionnaireMatriculeFiscal.errors['required']">{{"un champ obligatoire" | translate}}</div>
-		</div></div>
-		<label class="col-md-2 col-sm-6 col-form-label">{{"adresse siege social" | translate}} :&nbsp; <span class="text-danger">*</span></label>
-		<div class="col-md-4 col-sm-12">
-			<input type="text" class="form-control  mb-2" name="  soumissionnaireAdresseSiegeSocial"
-				[(ngModel)]="n.soumissionnaireAdresseSiegeSocial" required #soumissionnaireAdresseSiegeSocial="ngModel"
-				[ngClass]="{ 'is-invalid': f.submitted &&   soumissionnaireAdresseSiegeSocial.errors }" />
-			<div *ngIf="f.submitted &&   soumissionnaireAdresseSiegeSocial.errors" class="invalid-feedback">
-				<div *ngIf="  soumissionnaireAdresseSiegeSocial.errors['required']"> {{"un champ obligatoire" | translate}}</div>
-			</div>
-		</div>
-	</div>
-
-
-    <div class=" row mt-3">
-	
-		<label class="col-md-2 col-sm-6 col-form-label">{{"cnss" | translate}} :&nbsp; <span class="text-danger">*</span></label>
-		<div class="col-md-4 col-sm-12">
-			<input type="text" class="form-control  mb-2" name="soumissionnaireAffiliationCnss" [(ngModel)]="n.soumissionnaireAffiliationCnss"
-				required #soumissionnaireAffiliationCnss="ngModel"
-				[ngClass]="{ 'is-invalid': f.submitted && soumissionnaireAffiliationCnss.errors }" />
-		
-	
-		<div *ngIf="f.submitted && soumissionnaireAffiliationCnss.errors" class="invalid-feedback">
-			<div *ngIf="soumissionnaireAffiliationCnss.errors['required']">{{"un champ obligatoire" | translate}}</div>
-		</div></div>
-		<label class="col-md-2 col-sm-6 col-form-label">{{"numero rib" | translate}} :&nbsp; <span class="text-danger">*</span></label>
-		<div class="col-md-4 col-sm-12">
-			<input type="text" class="form-control  mb-2" name="  soumissionnaireNumeroRib"
-				[(ngModel)]="n.soumissionnaireNumeroRib" required #soumissionnaireNumeroRib="ngModel"
-				[ngClass]="{ 'is-invalid': f.submitted &&   soumissionnaireNumeroRib.errors }" />
-			<div *ngIf="f.submitted &&   soumissionnaireNumeroRib.errors" class="invalid-feedback">
-				<div *ngIf="  soumissionnaireNumeroRib.errors['required']"> {{"un champ obligatoire" | translate}}</div>
-			</div>
-		</div>
-	</div>
-
-
-
-    <div class=" row mt-3">
-	
-		<label class="col-md-2 col-sm-6 col-form-label">{{"lieu ouverture compte" | translate}} :&nbsp; <span class="text-danger">*</span></label>
-		<div class="col-md-4 col-sm-12">
-			<input type="text" class="form-control  mb-2" name="soumissionnaireLieuOuvertureCompte" [(ngModel)]="n.soumissionnaireLieuOuvertureCompte"
-				required #soumissionnaireLieuOuvertureCompte="ngModel"
-				[ngClass]="{ 'is-invalid': f.submitted && soumissionnaireLieuOuvertureCompte.errors }" />
-		
-	
-		<div *ngIf="f.submitted && soumissionnaireLieuOuvertureCompte.errors" class="invalid-feedback">
-			<div *ngIf="soumissionnaireLieuOuvertureCompte.errors['required']">{{"un champ obligatoire" | translate}}</div>
-		</div></div>
-		<label class="col-md-2 col-sm-6 col-form-label">{{"annee creation" | translate}} :&nbsp; <span class="text-danger">*</span></label>
-		<div class="col-md-4 col-sm-12">
-			<input type="date" class="form-control  mb-2" name="  soumissionnaireAnneeCreation"
-				[(ngModel)]="n.soumissionnaireAnneeCreation" required #soumissionnaireAnneeCreation="ngModel"
-				[ngClass]="{ 'is-invalid': f.submitted &&   soumissionnaireAnneeCreation.errors }" />
-			<div *ngIf="f.submitted &&   soumissionnaireAnneeCreation.errors" class="invalid-feedback">
-				<div *ngIf="  soumissionnaireAnneeCreation.errors['required']"> {{"un champ obligatoire" | translate}}</div>
-			</div>
-		</div>
-	</div>
-
-
-    <div class=" row mt-3">
-	
-		<label class="col-md-2 col-sm-6 col-form-label">{{"identifiant" | translate}} :&nbsp; <span class="text-danger">*</span></label>
-		<div class="col-md-4 col-sm-12">
-			<input type="text" class="form-control  mb-2" name="soumissionnaireIdentifiant" [(ngModel)]="n.soumissionnaireIdentifiant"
-				required #soumissionnaireIdentifiant="ngModel"
-				[ngClass]="{ 'is-invalid': f.submitted && soumissionnaireIdentifiant.errors }" />
-		
-	
-		<div *ngIf="f.submitted && soumissionnaireIdentifiant.errors" class="invalid-feedback">
-			<div *ngIf="soumissionnaireIdentifiant.errors['required']">{{"un champ obligatoire" | translate}}</div>
-		</div></div>
-		<label class="col-md-2 col-sm-6 col-form-label">{{"nom" | translate}} :&nbsp; <span class="text-danger">*</span></label>
-		<div class="col-md-4 col-sm-12">
-			<input type="text" class="form-control  mb-2" name="  soumissionnaireNom"
-				[(ngModel)]="n.soumissionnaireNom" required #soumissionnaireNom="ngModel"
-				[ngClass]="{ 'is-invalid': f.submitted &&   soumissionnaireNom.errors }" />
-			<div *ngIf="f.submitted &&   soumissionnaireNom.errors" class="invalid-feedback">
-				<div *ngIf="  soumissionnaireNom.errors['required']"> {{"un champ obligatoire" | translate}}</div>
-			</div>
-		</div>
-	</div>
-
-
-
-    <div class=" row mt-3">
-	
-		<label class="col-md-2 col-sm-6 col-form-label">{{"prenom" | translate}} :&nbsp; <span class="text-danger">*</span></label>
-		<div class="col-md-4 col-sm-12">
-			<input type="text" class="form-control  mb-2" name="soumissionnairePrenom" [(ngModel)]="n.soumissionnairePrenom"
-				required #soumissionnairePrenom="ngModel"
-				[ngClass]="{ 'is-invalid': f.submitted && soumissionnairePrenom.errors }" />
-		
-	
-		<div *ngIf="f.submitted && soumissionnairePrenom.errors" class="invalid-feedback">
-			<div *ngIf="soumissionnairePrenom.errors['required']">{{"un champ obligatoire" | translate}}</div>
-		</div></div>
-		<label class="col-md-2 col-sm-6 col-form-label">{{"tel" | translate}} :&nbsp; <span class="text-danger">*</span></label>
-		<div class="col-md-4 col-sm-12">
-			<input type="text" class="form-control  mb-2" name="  soumissionnaireTel"
-				[(ngModel)]="n.soumissionnaireTel" required #soumissionnaireTel="ngModel"
-				[ngClass]="{ 'is-invalid': f.submitted &&   soumissionnaireTel.errors }" />
-			<div *ngIf="f.submitted &&   soumissionnaireTel.errors" class="invalid-feedback">
-				<div *ngIf="  soumissionnaireTel.errors['required']"> {{"un champ obligatoire" | translate}}</div>
-			</div>
-		</div>
-	</div>
-
-
-
-   
-
-
-	
-
-	
-
-
-    <div class=" row mt-3">
-	
-		<label class="col-md-2 col-sm-6 col-form-label">{{"tel rep" | translate}} :&nbsp; <span class="text-danger">*</span></label>
-		<div class="col-md-4 col-sm-12">
-			<input type="text" class="form-control  mb-2" name="soumissionnaireTelRep" [(ngModel)]="n.soumissionnaireTelRep"
-				required #soumissionnaireTelRep="ngModel"
-				[ngClass]="{ 'is-invalid': f.submitted && soumissionnaireTelRep.errors }" />
-		
-	
-		<div *ngIf="f.submitted && soumissionnaireTelRep.errors" class="invalid-feedback">
-			<div *ngIf="soumissionnaireTelRep.errors['required']">{{"un champ obligatoire" | translate}}</div>
-		</div></div>
-		<label class="col-md-2 col-sm-6 col-form-label">{{"numero registre commerce" | translate}} :&nbsp; <span class="text-danger">*</span></label>
-		<div class="col-md-4 col-sm-12">
-			<input type="text" class="form-control  mb-2" name="  soumissionnaireNumeroRegistreCommerce"
-				[(ngModel)]="n.soumissionnaireNumeroRegistreCommerce" required #soumissionnaireNumeroRegistreCommerce="ngModel"
-				[ngClass]="{ 'is-invalid': f.submitted &&   soumissionnaireNumeroRegistreCommerce.errors }" />
-			<div *ngIf="f.submitted &&   soumissionnaireNumeroRegistreCommerce.errors" class="invalid-feedback">
-				<div *ngIf="  soumissionnaireNumeroRegistreCommerce.errors['required']"> {{"un champ obligatoire" | translate}}</div>
-			</div>
-		</div>
-	</div>
-
-
-    <div class=" row mt-3">
-	
-		<label class="col-md-2 col-sm-6 col-form-label">{{"codep" | translate}} :&nbsp; <span class="text-danger">*</span></label>
-		<div class="col-md-4 col-sm-12">
-			<input type="number" class="form-control  mb-2" name="codePostaleId" [(ngModel)]="n.codePostaleId"
-				required #codePostaleId="ngModel"
-				[ngClass]="{ 'is-invalid': f.submitted && codePostaleId.errors }" />
-		
-	
-		<div *ngIf="f.submitted && codePostaleId.errors" class="invalid-feedback">
-			<div *ngIf="codePostaleId.errors['required']">{{"un champ obligatoire" | translate}}</div>
-		</div></div>
-		<label class="col-md-2 col-sm-6 col-form-label">{{"autre adresse" | translate}} :&nbsp; <span class="text-danger">*</span></label>
-		<div class="col-md-4 col-sm-12">
-			<input type="text" class="form-control  mb-2" name="  soumissionnaireAutreAdresse"
-				[(ngModel)]="n.soumissionnaireAutreAdresse" required #soumissionnaireAutreAdresse="ngModel"
-				[ngClass]="{ 'is-invalid': f.submitted &&   soumissionnaireAutreAdresse.errors }" />
-			<div *ngIf="f.submitted &&   soumissionnaireAutreAdresse.errors" class="invalid-feedback">
-				<div *ngIf="  soumissionnaireAutreAdresse.errors['required']"> {{"un champ obligatoire" | translate}}</div>
-			</div>
-		</div>
-	</div>
-
-	<div class=" row mt-3">
-	
-			
-		<label class="col-md-2 col-sm-6 col-form-label">{{"titre rep" | translate}} :&nbsp; <span class="text-danger">*</span></label>
-		<div class="col-md-4 col-sm-12">
-			<input type="text" class="form-control  mb-2" name="  soumissionnaireTitreRep"
-				[(ngModel)]="n.soumissionnaireTitreRep" required #soumissionnaireTitreRep="ngModel"
-				[ngClass]="{ 'is-invalid': f.submitted &&   soumissionnaireTitreRep.errors }" />
-			<div *ngIf="f.submitted &&   soumissionnaireTitreRep.errors" class="invalid-feedback">
-				<div *ngIf="  soumissionnaireTitreRep.errors['required']"> {{"un champ obligatoire" | translate}}</div>
-			</div>
-		</div>
-	</div>
-
-    <div class="  row mt-3">
-		
-		
-	
-		<label class=" col-md-2 col-sm-6  col-form-label">{{"fonction" | translate}} :&nbsp; <span class="text-danger">*</span> </label>
-		<div class="col-md-4 col-sm-12">
-             
-
-			<select class="form-select" name="fonction" id="fonction" 
-			#fonction="ngModel" [(ngModel)]="n.fonction.fonctionId" 
-	[ngClass]="{'invalid-textbox' : f.submitted && fonction.invalid }" required>
-		   >
-			   <option  
-				
-			
-			   
-			   *ngFor="let l of listefonction" [value]="l.fonctionId">{{l.fonctionLibelle}}</option>
-			
-			
-			</select>
-			<div *ngIf="fonction.invalid && f.submitted">
-				<span style="color: red;"> {{"un champ obligatoire" | translate}} </span>
-			  </div>
-        </div>
-
-        <label class=" col-md-2 col-sm-6  col-form-label">{{"forme" | translate}} :&nbsp; <span class="text-danger">*</span> </label>
-		<div class="col-md-4 col-sm-12">
+		<label class=" col-md-3 col-sm-6  col-form-label">{{"forme" | translate}}: <span class="text-danger">*</span> </label>
+		<div class="col-md-3 col-sm-12">
              
 			<select class="form-select" name="formejuridique" id="formejuridique" 
 				#formejuridique="ngModel" [(ngModel)]="n.formejuridique.formeJuridiqueId" 
@@ -352,87 +77,220 @@
 					<span style="color: red;"> {{"un champ obligatoire" | translate}} </span>
 				  </div>
         </div>
+
+		
+	</div>
+
+	<div class=" row mt-3">
+		<label class="col-md-3 col-sm-6 col-form-label">{{"matricule fiscal" | translate}} :&nbsp; <span class="text-danger">*</span></label>
+		<div class="col-md-3 col-sm-12">
+			<input type="text" class="form-control  mb-2" name="soumissionnaireMatriculeFiscal" [(ngModel)]="n.soumissionnaireMatriculeFiscal"
+				required #soumissionnaireMatriculeFiscal="ngModel"
+				[ngClass]="{ 'is-invalid': f.submitted && soumissionnaireMatriculeFiscal.errors }" />
+		
+	
+		<div *ngIf="f.submitted && soumissionnaireMatriculeFiscal.errors" class="invalid-feedback">
+			<div *ngIf="soumissionnaireMatriculeFiscal.errors['required']">{{"un champ obligatoire" | translate}}</div>
+		</div></div>
+
+		<label class="col-md-3 col-sm-6 col-form-label">{{"capital" | translate}} :&nbsp; <span class="text-danger">*</span></label>
+		<div class="col-md-3 col-sm-12">
+			<input type="number" class="form-control  mb-2" name="soumissionnaireCapital"
+				[(ngModel)]="n.soumissionnaireCapital" required #soumissionnaireCapital="ngModel"
+				[ngClass]="{ 'is-invalid': f.submitted &&   soumissionnaireCapital.errors }" />
+			<div *ngIf="f.submitted &&   soumissionnaireCapital.errors" class="invalid-feedback">
+				<div *ngIf="  soumissionnaireCapital.errors['required']"> {{"un champ obligatoire" | translate}}</div>
+			</div>
+		</div>
+
+		
+
+
+		
+	</div>
+
+	<div class=" row mt-3">
+	
+		<label class="col-md-3 col-sm-6 col-form-label">{{"numero registre commerce" | translate}} :&nbsp; <span class="text-danger">*</span></label>
+		<div class="col-md-3 col-sm-12">
+			<input type="text" class="form-control  mb-2" name="  soumissionnaireNumeroRegistreCommerce"
+				[(ngModel)]="n.soumissionnaireNumeroRegistreCommerce" required #soumissionnaireNumeroRegistreCommerce="ngModel"
+				[ngClass]="{ 'is-invalid': f.submitted &&   soumissionnaireNumeroRegistreCommerce.errors }" />
+			<div *ngIf="f.submitted &&   soumissionnaireNumeroRegistreCommerce.errors" class="invalid-feedback">
+				<div *ngIf="  soumissionnaireNumeroRegistreCommerce.errors['required']"> {{"un champ obligatoire" | translate}}</div>
+			</div>
+		</div>
+
+		<label class="col-md-3 col-sm-6 col-form-label">{{"numero rib" | translate}} :&nbsp; <span class="text-danger">*</span></label>
+		<div class="col-md-3 col-sm-12">
+			<input type="text" class="form-control  mb-2" name="  soumissionnaireNumeroRib"
+				[(ngModel)]="n.soumissionnaireNumeroRib" required #soumissionnaireNumeroRib="ngModel"
+				[ngClass]="{ 'is-invalid': f.submitted &&   soumissionnaireNumeroRib.errors }" />
+			<div *ngIf="f.submitted &&   soumissionnaireNumeroRib.errors" class="invalid-feedback">
+				<div *ngIf="  soumissionnaireNumeroRib.errors['required']"> {{"un champ obligatoire" | translate}}</div>
+			</div>
+		</div>
+
+
+		
+		
+	</div>
 	
 
+    <div class=" row mt-3">
+		<label class="col-md-3 col-sm-6 col-form-label">{{"tel" | translate}} :&nbsp; <span class="text-danger">*</span></label>
+		<div class="col-md-3 col-sm-12">
+			<input required  
+			pattern="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]"  
+			type="text" class="form-control  mb-2" name="  soumissionnaireTel"
+				[(ngModel)]="n.soumissionnaireTel"  #soumissionnaireTel="ngModel"
+				[ngClass]="{ 'is-invalid': f.submitted &&   soumissionnaireTel.errors }" />
+			<div *ngIf="f.submitted && !soumissionnaireTel?.valid &&  soumissionnaireTel.errors" class="invalid-feedback">
+				<div *ngIf="  soumissionnaireTel.errors['required']"> {{"un champ obligatoire" | translate}}</div>
+				<div *ngIf="soumissionnaireTel.errors['pattern']"> {{"formee" | translate}}</div>
+			</div>
+		</div>
+
+
+		<label class="col-md-3 col-sm-6 col-form-label">{{"cnss" | translate}} :&nbsp; <span class="text-danger">*</span></label>
+		<div class="col-md-3 col-sm-12">
+			<input type="text" class="form-control  mb-2" name="soumissionnaireAffiliationCnss" [(ngModel)]="n.soumissionnaireAffiliationCnss"
+				required #soumissionnaireAffiliationCnss="ngModel"
+				[ngClass]="{ 'is-invalid': f.submitted && soumissionnaireAffiliationCnss.errors }" />
+		
+	
+		<div *ngIf="f.submitted && soumissionnaireAffiliationCnss.errors" class="invalid-feedback">
+			<div *ngIf="soumissionnaireAffiliationCnss.errors['required']">{{"un champ obligatoire" | translate}}</div>
+		</div></div>
+
+	
+		
 	</div>
 
 
-    <div class="  row mt-3">
-		
 
+    <div class=" row mt-3">
 	
-        <label class=" col-md-2 col-sm-6  col-form-label">{{"gouvernerat" | translate}} :&nbsp; <span class="text-danger">*</span> </label>
+		<label class="col-md-3 col-sm-6 col-form-label">{{"fax" | translate}} :&nbsp; <span class="text-danger">*</span></label>
+		<div class="col-md-3 col-sm-12">
+			<input pattern="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]" 
+			type="text" class="form-control  mb-2" name="soumissionnaireFax" [(ngModel)]="n.soumissionnaireFax"
+				required #soumissionnaireFax="ngModel"
+				[ngClass]="{ 'is-invalid': f.submitted && soumissionnaireFax.errors }" />
+		
+	
+		<div *ngIf="f.submitted && soumissionnaireFax.errors" class="invalid-feedback">
+			<div *ngIf="soumissionnaireFax.errors['required']">{{"un champ obligatoire" | translate}}</div>
+			<div *ngIf="soumissionnaireFax.errors['pattern']"> {{"formee" | translate}}</div>
+		</div></div>
+
+
+		<label class="col-md-3 col-sm-6 col-form-label">{{"annee creation" | translate}} : <span class="text-danger">*</span></label>
+		<div class="col-md-3 col-sm-12">
+			<input type="date" class="form-control  mb-2" name="  soumissionnaireAnneeCreation"
+				[(ngModel)]="n.soumissionnaireAnneeCreation" required #soumissionnaireAnneeCreation="ngModel"
+				[ngClass]="{ 'is-invalid': f.submitted &&   soumissionnaireAnneeCreation.errors }" />
+			<div *ngIf="f.submitted &&   soumissionnaireAnneeCreation.errors" class="invalid-feedback">
+				<div *ngIf="  soumissionnaireAnneeCreation.errors['required']"> {{"un champ obligatoire" | translate}}</div>
+			</div>
+		</div>
+
+<!--<label class="col-md-2 col-sm-6 col-form-label">{{"lieu ouverture compte" | translate}} :&nbsp; <span class="text-danger">*</span></label>
 		<div class="col-md-4 col-sm-12">
-            
+			<input type="text" class="form-control  mb-2" name="soumissionnaireLieuOuvertureCompte" [(ngModel)]="n.soumissionnaireLieuOuvertureCompte"
+				required #soumissionnaireLieuOuvertureCompte="ngModel"
+				[ngClass]="{ 'is-invalid': f.submitted && soumissionnaireLieuOuvertureCompte.errors }" />
+		
+	
+		<div *ngIf="f.submitted && soumissionnaireLieuOuvertureCompte.errors" class="invalid-feedback">
+			<div *ngIf="soumissionnaireLieuOuvertureCompte.errors['required']">{{"un champ obligatoire" | translate}}</div>
+		</div></div>-->
+		
+	</div>
+
+
+    <div class=" row mt-3">
+
+		<label class="col-md-3 col-sm-6 col-form-label">{{"mail entreprise" | translate}} :&nbsp; <span class="text-danger">*</span></label>
+		<div class="col-md-3 col-sm-12">
+			<input 
+			pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
+			type="text" class="form-control  mb-2" name="soumissionnaireMailEntreprise"
+				[(ngModel)]="n.soumissionnaireMailEntreprise" required #soumissionnaireMailEntreprise="ngModel"
+				[ngClass]="{ 'is-invalid': f.submitted &&   soumissionnaireMailEntreprise.errors }" />
+			<div *ngIf="f.submitted &&   soumissionnaireMailEntreprise.errors" class="invalid-feedback">
+				<div *ngIf="  soumissionnaireMailEntreprise.errors['required']"> {{"un champ obligatoire" | translate}}</div>
+				<div *ngIf="soumissionnaireMailEntreprise.errors['pattern']"> {{"formee" | translate}}</div>
+			</div>
 			
-			<select class="form-select" name="gouvernorat" id="gouvernorat" 
-				#gouvernorat="ngModel" [(ngModel)]="n.gouvernorat.gouverneratId" 
-        [ngClass]="{'invalid-textbox' : f.submitted && gouvernorat.invalid }" required>
-               >
-				   <option  
-                    
-		
-				
-				   *ngFor="let l of listegouvernerat" [value]="l.gouverneratId">{{l.gouverneratLibelle}}</option>
-				
-				
-				</select>
-				<div *ngIf="gouvernorat.invalid && f.submitted">
-					<span style="color: red;"> {{"un champ obligatoire" | translate}} </span>
-				  </div>
-        </div>
+		</div>
 
-        <label class=" col-md-2 col-sm-6  col-form-label">{{"pays" | translate}} :&nbsp; <span class="text-danger">*</span> </label>
+
 		<div class="col-md-4 col-sm-12">
-           
-
-			<select class="form-select" name="pays" id="pays" 
-				#pays="ngModel" [(ngModel)]="n.pays.paysId" 
-        [ngClass]="{'invalid-textbox' : f.submitted && pays.invalid }" required>
-               >
-				   <option  
-                    
-          
-				
-				 *ngFor="let l of listepays" [value]="l.paysId">{{l.paysLibelle}}</option>
-				
-				
-				</select>
-				<div *ngIf="pays.invalid && f.submitted">
-					<span style="color: red;"> {{"un champ obligatoire" | translate}} </span>
-				  </div>
-        </div>
+			
+			{{"responsable" | translate}} :
+		
 	
+		</div>
+	
+		<!--<label class="col-md-2 col-sm-6 col-form-label">{{"mail rep" | translate}} :&nbsp; <span class="text-danger">*</span></label>
+		<div class="col-md-4 col-sm-12">
+			<input type="text" class="form-control  mb-2" name="soumissionnaireMailRep" [(ngModel)]="n.soumissionnaireMailRep"
+				required #soumissionnaireMailRep="ngModel"
+				[ngClass]="{ 'is-invalid': f.submitted && soumissionnaireMailRep.errors }" />
+		
+	
+		<div *ngIf="f.submitted && soumissionnaireMailRep.errors" class="invalid-feedback">
+			<div *ngIf="soumissionnaireMailRep.errors['required']">{{"un champ obligatoire" | translate}}</div>
+		</div></div>-->
 
+		
+
+
+
+		
 	</div>
 
 
-    <div class="  row mt-3">
+    <div class=" row mt-3">
+		<label class="col-md-3 col-sm-6 col-form-label">{{"site web" | translate}} :&nbsp; <span class="text-danger">*</span></label>
+		<div class="col-md-3 col-sm-12">
+			<input type="text" class="form-control  mb-2" name="soumissionnaireSiteWeb"
+				[(ngModel)]="n.soumissionnaireSiteWeb" required #soumissionnaireSiteWeb="ngModel"
+				[ngClass]="{ 'is-invalid': f.submitted &&   soumissionnaireSiteWeb.errors }" />
+			<div *ngIf="f.submitted &&   soumissionnaireSiteWeb.errors" class="invalid-feedback">
+				<div *ngIf="  soumissionnaireSiteWeb.errors['required']"> {{"un champ obligatoire" | translate}}</div>
+			</div>
+		</div>
+
+		<label class="col-md-3 col-sm-6 col-form-label">{{"identifiant" | translate}} :</label>
+		<div class="col-md-3 col-sm-12">
+			<input type="text" class="form-control  mb-2" name="soumissionnaireIdentifiant" [(ngModel)]="n.soumissionnaireIdentifiant"
+				 #soumissionnaireIdentifiant="ngModel"
+				 />
 		
+	
+		</div>
+
+		
+		
+	</div>
+
+
+
+   
+
 
 	
-        <label class=" col-md-2 col-sm-6  col-form-label">{{"ville" | translate}} :&nbsp; <span class="text-danger">*</span> </label>
-		<div class="col-md-4 col-sm-12">
-            
-			<select class="form-select" name="ville" id="ville" 
-				#ville="ngModel" [(ngModel)]="n.ville.villeId" 
-        [ngClass]="{'invalid-textbox' : f.submitted && ville.invalid }" required>
-               >
-				   <option  
-                    
-				 
-				
-				   *ngFor="let l of listeville" [value]="l.villeId">{{l.villeNom}}</option>
-				
-				
-				</select>
-				<div *ngIf="ville.invalid && f.submitted">
-					<span style="color: red;"> {{"un champ obligatoire" | translate}} </span>
-				  </div>
-        </div>
 
-        <label class=" col-md-2 col-sm-6  col-form-label">{{"type" | translate}} :&nbsp; <span class="text-danger">*</span> </label>
-		<div class="col-md-4 col-sm-12">
+	
+
+	
+
+    <div class=" row mt-3">
+	
+		<label class=" col-md-3 col-sm-6  col-form-label">{{"type" | translate}} :&nbsp; <span class="text-danger">*</span> </label>
+		<div class="col-md-3 col-sm-12">
           
 
 			<select class="form-select" name="typemarche" id="typemarche" 
@@ -451,7 +309,224 @@
 					<span style="color: red;"> {{"un champ obligatoire" | translate}} </span>
 				  </div>
         </div>
+
+		<label class="col-md-3 col-sm-6 col-form-label">{{"prenom" | translate}} :&nbsp; <span class="text-danger">*</span></label>
+		<div class="col-md-3 col-sm-12">
+			<input type="text" class="form-control  mb-2" name="soumissionnairePrenom" [(ngModel)]="n.soumissionnairePrenom"
+				required #soumissionnairePrenom="ngModel"
+				[ngClass]="{ 'is-invalid': f.submitted && soumissionnairePrenom.errors }" />
+		
 	
+		<div *ngIf="f.submitted && soumissionnairePrenom.errors" class="invalid-feedback">
+			<div *ngIf="soumissionnairePrenom.errors['required']">{{"un champ obligatoire" | translate}}</div>
+		</div></div>
+
+
+		
+		
+	</div>
+
+
+
+    <div class=" row mt-3">
+
+
+	<div class="col-md-4 col-sm-12">
+		
+		{{"adresse siege sociale" | translate}} :
+	
+
+	</div>
+
+		<label class="col-md-3  offset-2 col-sm-6 col-form-label">{{"nom" | translate}} :&nbsp; <span class="text-danger">*</span></label>
+		<div class="col-md-3 col-sm-12">
+			<input type="text" class="form-control  mb-2" name="  soumissionnaireNom"
+				[(ngModel)]="n.soumissionnaireNom" required #soumissionnaireNom="ngModel"
+				[ngClass]="{ 'is-invalid': f.submitted &&   soumissionnaireNom.errors }" />
+			<div *ngIf="f.submitted &&   soumissionnaireNom.errors" class="invalid-feedback">
+				<div *ngIf="  soumissionnaireNom.errors['required']"> {{"un champ obligatoire" | translate}}</div>
+			</div>
+		</div>
+
+	
+		<!--
+		<label class="col-md-2 col-sm-6 col-form-label">{{"autre adresse" | translate}} :&nbsp; <span class="text-danger">*</span></label>
+		<div class="col-md-4 col-sm-12">
+			<input type="text" class="form-control  mb-2" name="  soumissionnaireAutreAdresse"
+				[(ngModel)]="n.soumissionnaireAutreAdresse" required #soumissionnaireAutreAdresse="ngModel"
+				[ngClass]="{ 'is-invalid': f.submitted &&   soumissionnaireAutreAdresse.errors }" />
+			<div *ngIf="f.submitted &&   soumissionnaireAutreAdresse.errors" class="invalid-feedback">
+				<div *ngIf="  soumissionnaireAutreAdresse.errors['required']"> {{"un champ obligatoire" | translate}}</div>
+			</div>
+		</div>-->
+	</div>
+
+	<div class=" row mt-3">
+	
+		<label class="col-md-3 col-sm-6 col-form-label">{{"adresse siege social" | translate}} :&nbsp; <span class="text-danger">*</span></label>
+		<div class="col-md-3 col-sm-12">
+			<input type="text" class="form-control  mb-2" name="  soumissionnaireAdresseSiegeSocial"
+				[(ngModel)]="n.soumissionnaireAdresseSiegeSocial" required #soumissionnaireAdresseSiegeSocial="ngModel"
+				[ngClass]="{ 'is-invalid': f.submitted &&   soumissionnaireAdresseSiegeSocial.errors }" />
+			<div *ngIf="f.submitted &&   soumissionnaireAdresseSiegeSocial.errors" class="invalid-feedback">
+				<div *ngIf="  soumissionnaireAdresseSiegeSocial.errors['required']"> {{"un champ obligatoire" | translate}}</div>
+			</div>
+		</div>
+
+		<label class=" col-md-3 col-sm-6  col-form-label">{{"fonction" | translate}} :&nbsp; <span class="text-danger">*</span> </label>
+		<div class="col-md-3 col-sm-12">
+             
+
+			<select class="form-select" name="fonction" id="fonction" 
+			#fonction="ngModel" [(ngModel)]="n.fonction.fonctionId" 
+	[ngClass]="{'invalid-textbox' : f.submitted && fonction.invalid }" required>
+		   >
+			   <option  
+				
+			
+			   
+			   *ngFor="let l of listefonction" [value]="l.fonctionId">{{l.fonctionLibelle}}</option>
+			
+			
+			</select>
+			<div *ngIf="fonction.invalid && f.submitted">
+				<span style="color: red;"> {{"un champ obligatoire" | translate}} </span>
+			  </div>
+        </div>
+		
+
+
+		
+	</div>
+
+    <div class="  row mt-3">
+		<label class="col-md-3 col-sm-6 col-form-label">{{"codep" | translate}} :&nbsp; <span class="text-danger">*</span></label>
+		<div class="col-md-3 col-sm-12">
+			<input type="number" class="form-control  mb-2" name="codePostaleId" [(ngModel)]="n.codePostaleId"
+				required #codePostaleId="ngModel"
+				[ngClass]="{ 'is-invalid': f.submitted && codePostaleId.errors }" />
+		
+	
+		<div *ngIf="f.submitted && codePostaleId.errors" class="invalid-feedback">
+			<div *ngIf="codePostaleId.errors['required']">{{"un champ obligatoire" | translate}}</div>
+		</div></div>
+		
+
+
+		<div class="col-md-4 col-sm-12">
+			{{"representant legal" | translate}} :
+			
+		
+	
+		</div>
+	
+		
+
+        <!--<label class=" col-md-2 col-sm-6  col-form-label">{{"forme" | translate}} :&nbsp; <span class="text-danger">*</span> </label>
+		<div class="col-md-4 col-sm-12">
+             
+			<select class="form-select" name="formejuridique" id="formejuridique" 
+				#formejuridique="ngModel" [(ngModel)]="n.formejuridique.formeJuridiqueId" 
+        [ngClass]="{'invalid-textbox' : f.submitted && formejuridique.invalid }" required>
+               >
+				   <option  
+                    
+				  
+				
+				   *ngFor="let l of listeforme" [value]="l.formeJuridiqueId">{{l.formeJuridiqueNom}}</option>
+				
+				
+				</select>
+				<div *ngIf="formejuridique.invalid && f.submitted">
+					<span style="color: red;"> {{"un champ obligatoire" | translate}} </span>
+				  </div>
+        </div>-->
+	
+
+	</div>
+
+
+    <div class="  row mt-3">
+		<label class=" col-md-3 col-sm-6  col-form-label">{{"pays" | translate}} :&nbsp; <span class="text-danger">*</span> </label>
+		<div class="col-md-3 col-sm-12">
+           
+
+			<select  (change)="onSelectedP()" class="form-select" name="pays" id="pays" 
+				#pays="ngModel" [(ngModel)]="n.pays.paysId" 
+        [ngClass]="{'invalid-textbox' : f.submitted && pays.invalid }" required>
+               >
+				   <option  
+                    
+          
+				
+				 *ngFor="let l of listepays" [value]="l.paysId">{{l.paysLibelle}}</option>
+				
+				
+				</select>
+				<div *ngIf="pays.invalid && f.submitted">
+					<span style="color: red;"> {{"un champ obligatoire" | translate}} </span>
+				  </div>
+        </div>
+
+	
+       
+
+
+		<label class="col-md-3 col-sm-6 col-form-label">{{"titre rep" | translate}} :</label>
+		<div class="col-md-3 col-sm-12">
+			<input type="text" class="form-control  mb-2" name="  soumissionnaireTitreRep"
+				[(ngModel)]="n.soumissionnaireTitreRep"  #soumissionnaireTitreRep="ngModel"
+				 />
+			
+		</div>
+
+        
+	
+
+	</div>
+
+    <div class="  row mt-3">
+		
+		<label class=" col-md-3 col-sm-6  col-form-label">{{"gouvernerat" | translate}} :&nbsp; <span class="text-danger">*</span> </label>
+		<div class="col-md-3 col-sm-12">
+            
+			
+			<select (change)="onSelectedG()" class="form-select" name="gouvernorat" id="gouvernorat" 
+				#gouvernorat="ngModel" [(ngModel)]="n.gouvernorat.gouverneratId" 
+        [ngClass]="{'invalid-textbox' : f.submitted && gouvernorat.invalid }" required>
+               >
+				   <option  
+                    
+		
+				
+				   *ngFor="let l of listegouvernerat" [value]="l.gouverneratId">{{l.gouverneratLibelle}}</option>
+				
+				
+				</select>
+				<div *ngIf="gouvernorat.invalid && f.submitted">
+					<span style="color: red;"> {{"un champ obligatoire" | translate}} </span>
+				  </div>
+        </div>
+	
+       
+
+       
+		<label class="col-md-3 col-sm-6 col-form-label">{{"mail rep" | translate}} :&nbsp; <span class="text-danger">*</span></label>
+		<div class="col-md-3 col-sm-12">
+			<input   
+			pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
+			type="text" class="form-control  mb-2" name="soumissionnaireMailRep" [(ngModel)]="n.soumissionnaireMailRep"
+				required #soumissionnaireMailRep="ngModel"
+				[ngClass]="{ 'is-invalid': f.submitted && soumissionnaireMailRep.errors }" />
+		
+	
+		<div *ngIf="f.submitted && soumissionnaireMailRep.errors" class="invalid-feedback">
+			<div *ngIf="soumissionnaireMailRep.errors['required']">{{"un champ obligatoire" | translate}}</div>
+			<div *ngIf="soumissionnaireMailRep.errors['pattern']"> {{"formee" | translate}}</div>
+		</div></div>
+
+
+		<!---->
 
 	</div>
 
@@ -459,9 +534,41 @@
    
     <div class="  row mt-3">
 		
+		<label class=" col-md-3 col-sm-6  col-form-label">{{"ville" | translate}} :&nbsp; <span class="text-danger">*</span> </label>
+		<div class="col-md-3 col-sm-12">
+            
+			<select class="form-select" name="ville" id="ville" 
+				#ville="ngModel" [(ngModel)]="n.ville.villeId" 
+        [ngClass]="{'invalid-textbox' : f.submitted && ville.invalid }" required>
+               >
+				   <option  
+                    
+				 
+				
+				   *ngFor="let l of listeville" [value]="l.villeId">{{l.villeNom}}</option>
+				
+				
+				</select>
+				<div *ngIf="ville.invalid && f.submitted">
+					<span style="color: red;"> {{"un champ obligatoire" | translate}} </span>
+				  </div>
+        </div>
 
+		<label class="col-md-3 col-sm-6 col-form-label">{{"tel rep" | translate}} :&nbsp; <span class="text-danger">*</span></label>
+		<div class="col-md-3 col-sm-12">
+			<input 
+			pattern="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]" 
+			type="text" class="form-control  mb-2" name="soumissionnaireTelRep" [(ngModel)]="n.soumissionnaireTelRep"
+				required #soumissionnaireTelRep="ngModel"
+				[ngClass]="{ 'is-invalid': f.submitted && soumissionnaireTelRep.errors }" />
+		
 	
-        <label class=" col-md-2 col-sm-6  col-form-label">{{"etat" | translate}} :&nbsp; <span class="text-danger">*</span> </label>
+		<div *ngIf="f.submitted && soumissionnaireTelRep.errors" class="invalid-feedback">
+			<div *ngIf="soumissionnaireTelRep.errors['required']">{{"un champ obligatoire" | translate}}</div>
+			<div *ngIf="soumissionnaireTelRep.errors['pattern']"> {{"formee" | translate}}</div>
+		</div></div>
+	
+       <!-- <label class=" col-md-2 col-sm-6  col-form-label">{{"etat" | translate}} :&nbsp; <span class="text-danger">*</span> </label>
 		<div class="col-md-4 col-sm-12">
             
 			<select class="form-select" name="etat" id="etat" 
@@ -479,9 +586,9 @@
 				<div *ngIf="etat.invalid && f.submitted">
 					<span style="color: red;"> {{"un champ obligatoire" | translate}} </span>
 				  </div>
-        </div>
+        </div>-->
 
-        <label class=" col-md-2 col-sm-6  col-form-label">{{"etat compte" | translate}} :&nbsp; <span class="text-danger">*</span> </label>
+        <!--<label class=" col-md-2 col-sm-6  col-form-label">{{"etat compte" | translate}} :&nbsp; <span class="text-danger">*</span> </label>
 		<div class="col-md-4 col-sm-12">
           
 
@@ -500,7 +607,7 @@
 				<div *ngIf="soumissionnaireEtatCompte.invalid && f.submitted">
 					<span style="color: red;"> {{"un champ obligatoire" | translate}} </span>
 				  </div>
-        </div>
+        </div>-->
 	
 
 	</div>

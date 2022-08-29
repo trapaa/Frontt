@@ -9,6 +9,7 @@ import { NgForm } from '@angular/forms';
 import { TypeCahierCharges } from 'src/app/models/TypeCahierCharges';
 import { Pays } from 'src/app/models/Pays';
 import { Soumissionnaire } from 'src/app/models/Soumissionnaire';
+import { Ville } from 'src/app/models/Ville';
 
 @Component({
   selector: 'app-ajouter-soumissionnaire',
@@ -19,7 +20,8 @@ export class AjouterSoumissionnaireComponent implements OnInit {
 
   constructor(private Service:SoumissionnaireService,private router:Router) { }
   selectedTeam = '';
-  
+  gouv=new gouvernorat;
+  vil=new Ville;
  n=new Soumissionnaire();
   List:any
   listetat:any
@@ -30,6 +32,7 @@ export class AjouterSoumissionnaireComponent implements OnInit {
   listemarche:any
   listeville:any
   pays:any
+
   form = {
     
     
@@ -46,10 +49,10 @@ export class AjouterSoumissionnaireComponent implements OnInit {
     soumissionnairePrenom: '',
     soumissionnaireTel: '',
     soumissionnaireFax: '',
-    soumissionnaireMailEntreprise: '',
+    soumissionnaireMailEntreprise: ['', [Validators.required, Validators.email]],
     soumissionnaireSiteWeb: '',
     soumissionnaireTitreRep: '',
-    soumissionnaireMailRep: '',
+    soumissionnaireMailRep: ['', [Validators.required, Validators.email]],
     soumissionnaireTelRep: '',
   
    soumissionnaireNumeroRegistreCommerce: '',
@@ -70,14 +73,42 @@ export class AjouterSoumissionnaireComponent implements OnInit {
   };
 
 
-  onSelected(value:string): void {
-		this.selectedTeam = value;
+  onSelectedP(): void {
+    
+
+   
+    this.n.gouvernorat.gouverneratId=this.gouv.gouverneratId
+    this.n.ville.villeId=this.vil.villeId
+    this.listeville=[]
+    this.listegouvernerat=[]
+
+     this.Service.listegouvernerat(this.n.pays.paysId)
+  
+     .subscribe(data => {
+           
+       this.listegouvernerat=data    
+      })
+    
+	}
+
+  onSelectedG(): void {
+    this.Service.listeville(this.n.gouvernorat.gouverneratId)
+  
+    .subscribe(data => {
+          
+      this.listeville=data    
+     })
+
+
+     
     
 	}
 
 
   onSubmit(): void {
+    console.log(this.n);
     this.Service.ajouter(this.n).subscribe(
+      
       ()=>  (this.router.navigate(['/list-sou']))
     )
 
@@ -86,6 +117,10 @@ export class AjouterSoumissionnaireComponent implements OnInit {
     
   }
   ngOnInit(): void {
+
+
+
+        this.n=new Soumissionnaire();
 
 
     this.Service.listeforme()
@@ -102,12 +137,7 @@ export class AjouterSoumissionnaireComponent implements OnInit {
        this.listefonction=data    
       })
 
-      this.Service.listegouvernerat()
-  
-      .subscribe(data => {
-            
-        this.listegouvernerat=data    
-       })
+   
 
        this.Service.listepays()
   
@@ -123,12 +153,7 @@ export class AjouterSoumissionnaireComponent implements OnInit {
           this.listemarche=data    
          })
 
-         this.Service.listeville()
-  
-         .subscribe(data => {
-               
-           this.listeville=data    
-          })
+
 
           this.Service.listeEtat()
   

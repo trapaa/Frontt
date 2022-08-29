@@ -4,10 +4,20 @@ table {
   }
   .mat-column-soumissionnaireMatriculeFiscal {
 
-    width: 35%;
+    width: 15%;
 }
 
 .mat-column-pays {
 
-    width: 15%;
+    width: 35%;
+}
+
+.mat-column-soumissionnaireNumeroRegistreCommerce {
+
+  width: 15%;
+}
+
+.mat-column-soumissionnaireRaisonSociale {
+
+  width: 15%;
 }

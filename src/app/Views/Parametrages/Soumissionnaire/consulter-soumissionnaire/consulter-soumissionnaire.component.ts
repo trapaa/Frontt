@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { DatePipe } from '@angular/common'
 
 import {  Router,ActivatedRoute } from '@angular/router';
 import { Pays } from 'src/app/models/Pays';
@@ -13,12 +13,13 @@ import { SoumissionnaireService } from '../../../../services/soumissionnaire.ser
   styleUrls: ['./consulter-soumissionnaire.component.css']
 })
 export class ConsulterSoumissionnaireComponent implements OnInit {
-
+  date:any
   id:any
-  n:any
-  constructor(private Service:SoumissionnaireService,private router:Router,private route: ActivatedRoute) { }
+n:any
+  constructor(private Service:SoumissionnaireService,private router:Router,private route: ActivatedRoute,public datepipe: DatePipe) { }
 
   ngOnInit(): void {
+    this.n=new Soumissionnaire();
     this.id=localStorage.getItem('id')
 
    // this.n=new Soumissionnaire()
@@ -29,8 +30,11 @@ export class ConsulterSoumissionnaireComponent implements OnInit {
     .subscribe(data => {
           
       this.n=data 
+      this.date=new Date();
+      this.date=this.datepipe.transform(this.n.soumissionnaireAnneeCreation, 'yyyy-MM-dd');
+console.log(this.date)
       console.log("s;w:")
-      console.log(this.n)
+      console.log(this.n.soumissionnaireReference)
       
      })
   }
